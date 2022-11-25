@@ -19,9 +19,6 @@ while($invoer = 10 || $invoer = 16 || $invoer = 18|| $invoer = 50 || $invoer = 6
 
 //felicitaties
 //if ($invoer = 10 || $invoer = 16 || $invoer = 18|| $invoer = 50 || $invoer = 67 || $invoer = 100)
-
 //waarschuwing
-//while($invoer != 62) {
-    
-
+//while($invoer != 62)
 ?>
