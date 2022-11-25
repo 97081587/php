@@ -9,10 +9,11 @@ if ($invoer < 9 || $invoer > 118) {
 
 // felicitaties + waarschuwing
 while($invoer = 10 || $invoer = 16 || $invoer = 18|| $invoer = 50 || $invoer = 67 || $invoer = 100) {
+        echo "gefeliciteerd!";
     if ($invoer = 62) {
         echo "het duurt nog 5 jaar voordat je 67 bent.";
     }
-    echo "gefeliciteerd!";
+    
 }
 
 
