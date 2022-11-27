@@ -7,19 +7,16 @@ if ($invoer < 9 || $invoer > 118) {
     exit("te oud/te jong");
 }
 
-// felicitaties + waarschuwing
-while($invoer = 10 || $invoer = 16 || $invoer = 18|| $invoer = 50 || $invoer = 67 || $invoer = 100) {
-        echo "gefeliciteerd!";
-    if ($invoer = 62) {
-        echo "het duurt nog 5 jaar voordat je 67 bent.";
-    }
-    
+// felicitaties
+$teller=1;
+$maximum=1;
+while ( $teller <= $maximum && $invoer == 10 ||$teller <= $maximum && $invoer == 16 || $teller <= $maximum && $invoer == 18|| $teller <= $maximum && $invoer == 50 || $teller <= $maximum && $invoer == 67 || $teller <= $maximum && $invoer == 100) {
+        echo "gefeliciteerd!\n";
+        $teller++;  
 }
 
-
-//commit
-//felicitaties
-//if ($invoer = 10 || $invoer = 16 || $invoer = 18|| $invoer = 50 || $invoer = 67 || $invoer = 100)
-//waarschuwing
-//while($invoer != 62)
+// waarschuwing
+if ($invoer == 62) {
+     echo "het duurt nog 5 jaar voordat je 67 bent.";
+}
 ?>
