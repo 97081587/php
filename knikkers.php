@@ -10,9 +10,8 @@ if ($invoer < 1 || $invoer > 20) {
 //knikker teller
 $begin=1;
 $maximum=$invoer;
-
 for ($teller=$begin;$teller<=$maximum;$teller++) {
-    $begin-$invoer;
-    echo $begin." knikkers opgegooid, nog ".$invoer." in mijn zak\n";
+    $knikker=$invoer-$teller;
+    echo $teller." knikkers opgegooid, nog ".$knikker." in mijn zak.\n";
 }
 ?>
