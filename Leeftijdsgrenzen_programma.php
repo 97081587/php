@@ -17,6 +17,6 @@ while ( $teller <= $maximum && $invoer == 10 ||$teller <= $maximum && $invoer ==
 
 // waarschuwing
 if ($invoer == 62) {
-     echo "het duurt nog 5 jaar voordat je 67 bent.";
+     echo "WAARSCHUWING: het duurt nog 5 jaar voordat je 67 bent.";
 }
 ?>
