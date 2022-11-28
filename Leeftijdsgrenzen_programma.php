@@ -8,11 +8,8 @@ if ($invoer < 9 || $invoer > 118) {
 }
 
 // felicitaties
-$teller=1;
-$maximum=1;
-while ( $teller <= $maximum && $invoer == 10 ||$teller <= $maximum && $invoer == 16 || $teller <= $maximum && $invoer == 18|| $teller <= $maximum && $invoer == 50 || $teller <= $maximum && $invoer == 67 || $teller <= $maximum && $invoer == 100) {
-        echo "gefeliciteerd!\n";
-        $teller++;  
+if ($invoer == 10 ||$invoer == 16 ||$invoer == 18|| $invoer == 50 || $invoer == 67 ||$invoer == 100) {
+        echo "gefeliciteerd!\n"; 
 }
 
 // waarschuwing
