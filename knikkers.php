@@ -3,8 +3,8 @@
 $invoer = readline("geef aantal knikkers die in de zak zitten: ");
 
 //limiet
-if ($invoer < 1 || $invoer > 20) {
-    exit("je moet kiezen tussen 1 en 20 knikkers");
+if ($invoer < 1 || $invoer > 20 ||!is_int($invoer*1)) {
+    exit("je moet gehele getallen kiezen tussen 1 en 20 knikkers");
 }
 
 //knikker teller
