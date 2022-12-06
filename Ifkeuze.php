@@ -2,10 +2,11 @@
 
 $naam = readline("Geef jouw naam : ");
 $leeftijd = readline("Geef jouw leeftijd : ");
+$tekst="21";
 
 echo "Hallo $naam \n";
 
-if ($leeftijd < $tekst="21") {
+if ($leeftijd < $tekst) {
     echo "Jij bent jonger dan $tekst jaar. \n";
 }
 if ($leeftijd > $tekst) {
