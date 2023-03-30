@@ -32,11 +32,11 @@
        <br>
     </div>
    <div class="plaats">
-    <label for="Plaats">Plaats:</label>
-    <br>
-    <input type="text" id="plaats" name="plaats"
+     <label for="Plaats">Plaats:</label>
+     <br>
+     <input type="text" id="plaats" name="plaats"
        placeholder="Plaats" maxlength="85" value="" required>
-    <br>
+     <br>
    </div>
 
    
