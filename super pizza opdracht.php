@@ -10,12 +10,13 @@
 </head>
 
 <body>
+<p>pizza di mama</p>
  <form method=post action="">
   <div class="fname">
     <label for="fname">Voornaam:</label>
     <br>
     <input type="text" id="fname" name="fname"
-      placeholder="Voornaam" maxlength="747" value="" required>
+      placeholder="Voornaam" value="" required>
     <br>
   </div>
    <div class="adres">
