@@ -56,6 +56,7 @@
     placeholder="BeOfAf" value="">
   <br>
 </div>
+<input type="submit" name="submit" value="gegevens versturen" />
 </form>  
 </body>
 </html>
