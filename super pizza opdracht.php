@@ -41,6 +41,8 @@
      <br>
    </div>
   <div class="Bdatum">
+     <label for="Bdatum">Besteldatum:</label>
+     <br>
      <input type="date" id="Bdatum" name="Bdatum">
   </div>
 <div class="BeOfAf">
