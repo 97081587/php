@@ -40,6 +40,17 @@
        placeholder="Plaats" maxlength="85" value="" required>
      <br>
    </div>
+  <div class="BeOfAf">
+    <label for="BeOfAf">bezorgen of afhalen?</label>
+    <br>
+    <label for="BeOfAf">bezorgen</label>
+    <input type="radio" id="BeOfAf" name="BeOfAf"
+       placeholder="BeOfAf" value="">
+    <label for="BeOfAf">afhalen</label>
+    <input type="radio" id="BeOfAf" name="BeOfAf"
+      placeholder="BeOfAf" value="">
+    <br>
+  </div>
  </form>
    
 </body>
