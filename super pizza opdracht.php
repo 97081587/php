@@ -56,7 +56,6 @@
     placeholder="BeOfAf" value="">
   <br>
 </div>
-</form>
-   
+</form>  
 </body>
 </html>
