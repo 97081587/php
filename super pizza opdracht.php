@@ -10,6 +10,7 @@
 </head>
 
 <body>
+ <form method=post action="">
   <div class="fname">
     <label for="fname">Voornaam:</label>
     <br>
@@ -38,7 +39,7 @@
        placeholder="Plaats" maxlength="85" value="" required>
      <br>
    </div>
-
+ </form>
    
 </body>
 </html>
