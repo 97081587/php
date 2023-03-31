@@ -43,7 +43,7 @@
   <div class="Bdatum">
      <label for="Bdatum">Besteldatum:</label>
      <br>
-     <input type="date" id="Bdatum" name="Bdatum">
+     <input type="date" id="Bdatum" name="Bdatum" value="2022-03-31" min="2022-03-15" max="2022-01-24">
   </div>
 <div class="BeOfAf">
   <label for="BeOfAf">bezorgen of afhalen?</label>
