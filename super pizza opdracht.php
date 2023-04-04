@@ -61,11 +61,11 @@
       Soort:
     <select name="land" required>
       <option value="" disabled> Maak uw keuze</option>
-      <option value="Pi Marg">Pizza Margherita</option>
-      <option value="Pi fung">Pizza Fungi</option>
-      <option value="Pi Mari">Pizza Marina</option>
-      <option value="Pi Hawa">Pizza Hawai</option>
-      <option value="Pi Quat">Pizza Quattro Formaggi</option>
+      <option value="Pi Marg">Pizza Margherita 🍕</option>
+      <option value="Pi fung">Pizza Fungi 🍕</option>
+      <option value="Pi Mari">Pizza Marina 🍕</option>
+      <option value="Pi Hawa">Pizza Hawai 🍕</option>
+      <option value="Pi Quat">Pizza Quattro Formaggi 🍕</option>
     </select>
 </form>
 </div>
