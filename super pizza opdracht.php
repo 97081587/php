@@ -56,6 +56,20 @@
      placeholder="BeOfAf" value="">
    <br>
  </div>
+<div class="pizza">
+<form method="post" action="">
+      Soort:
+    <select name="land" required>
+      <option value="" disabled> Maak uw keuze</option>
+      <option value="Pi Marg">Pizza Margherita</option>
+      <option value="Pi fung">Pizza Fungi</option>
+      <option value="Pi Mari">Pizza Marina</option>
+      <option value="Pi Hawa">Pizza Hawai</option>
+      <option value="Pi Quat">Pizza Quattro Formaggi</option>
+    </select>
+</form>
+</div>
+<br>
 <input type="submit" name="submit" value="gegevens versturen" />
 </form>  
 </body>
