@@ -1,3 +1,22 @@
+<?php
+$fname = '';
+$adres = '';
+$Pcode = '';
+$plaats = '';
+$Bdatum = '';
+$BeOfAf = '';
+$Pizza = '';
+if(isset($_POST["submit"])){
+      $fname = $_POST["fname"];
+      $adres = $_POST["adres"];
+      $Pcode = $_POST["pcode"];
+      $plaats = $_POST["plaats"];
+      $Bdatum = $_POST["Bdatum"];
+      $BeOfAf = $_POST["BeOfAf"];
+      $Pizza = $_POST["pizza"];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -43,7 +62,7 @@
    <div class="Bdatum">
       <label for="Bdatum">Besteldatum:</label>
       <br>
-      <input type="date" id="Bdatum" name="Bdatum" value="2022-03-15" min="2022-03-15" max="2022-04-24">
+      <input type="date" id="Bdatum" name="Bdatum" value="2023-03-15" min="2023-03-15" max="2023-04-24">
    </div>
  <div class="BeOfAf">
    <label for="BeOfAf">bezorgen of afhalen?</label>
@@ -57,20 +76,39 @@
    <br>
  </div>
 <div class="pizza">
-<form method="post" action="">
       Soort:
-    <select name="land" required>
-      <option value="" disabled> Maak uw keuze</option>
-      <option value="Pi Marg">Pizza Margherita 🍕</option>
-      <option value="Pi fung">Pizza Fungi 🍕</option>
-      <option value="Pi Mari">Pizza Marina 🍕</option>
-      <option value="Pi Hawa">Pizza Hawai 🍕</option>
-      <option value="Pi Quat">Pizza Quattro Formaggi 🍕</option>
+    <select name="pizza" required>
+      <option value="" <?php if($Pizza==''){ echo "selected";}?>disabled> Maak uw keuze</option>
+      <option value="Pi Marg"<?php if($Pizza=='Pi Marg'){ echo "selected";}?>>Pizza Margherita 🍕</option>
+      <option value="Pi fung"<?php if($Pizza=='Pi fung'){ echo "selected";}?>>Pizza Fungi 🍕</option>
+      <option value="Pi Mari"<?php if($Pizza=='Pi Mari'){ echo "selected";}?>>Pizza Marina 🍕</option>
+      <option value="Pi Hawa"<?php if($Pizza=='Pi Hawa'){ echo "selected";}?>>Pizza Hawai 🍕</option>
+      <option value="Pi Quat"<?php if($Pizza=='Pi Quat'){ echo "selected";}?>>Pizza Quattro Formaggi 🍕</option>
     </select>
-</form>
 </div>
 <br>
 <input type="submit" name="submit" value="gegevens versturen" />
 </form>  
 </body>
+
+<?php
+$Pizza == ""; 
+  switch ($Pizza){ 
+         case "Pi Marg":
+               echo 'Goedemorgen '.$Pizza .$Fname;
+         break;
+         case "Pi fung":
+               echo 'Guten Morgen '.$Pizza;
+         break;
+         case "Pi Mari":
+               echo 'Good morning '.$Pizza;
+         break;
+         case "Pi Hawa":
+                echo 'Bonjour '.$Pizza;
+         break;
+         case "Pi Quat":
+                echo 'Buen día '.$Pizza;
+         break;
+        }
+ ?>
 </html>
