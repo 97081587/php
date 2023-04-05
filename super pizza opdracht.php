@@ -95,19 +95,19 @@ if(isset($_POST["submit"])){
 $Pizza == ""; 
   switch ($Pizza){ 
          case "Pi Marg":
-               echo 'Goedemorgen '.$Pizza .$Fname;
+               echo 'Pizza Margherita 🍕';
          break;
          case "Pi fung":
-               echo 'Guten Morgen '.$Pizza;
+               echo 'Pizza Fungi 🍕';
          break;
          case "Pi Mari":
-               echo 'Good morning '.$Pizza;
+               echo 'Pizza Marina 🍕';
          break;
          case "Pi Hawa":
-                echo 'Bonjour '.$Pizza;
+                echo 'Pizza Hawaii 🍕';
          break;
          case "Pi Quat":
-                echo 'Buen día '.$Pizza;
+                echo 'Pizza Quattro Formaggi 🍕';
          break;
         }
  ?>
