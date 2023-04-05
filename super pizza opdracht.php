@@ -29,7 +29,7 @@ if(isset($_POST["submit"])){
 </head>
 
 <body>
-<h1>pizza di mama</h1>
+<h1>pizza di mama 🍕</h1>
   <form method=post action="">
    <div class="fname">
      <label for="fname">Voornaam:</label>
@@ -77,6 +77,7 @@ if(isset($_POST["submit"])){
  </div>
 <div class="pizza">
       Pizza:
+      <br>
     <select name="pizza" required>
       <option value=""<?php if($Pizza==''){ echo "selected";}?>disabled> Maak uw keuze</option>
       <option value="Pi Marg"<?php if($Pizza=='Pi Marg'){ echo "selected";}?>>Pizza Margherita 🍕</option>
@@ -98,16 +99,16 @@ $Pizza == "";
                echo 'Pizza Margherita 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
          break;
          case "Pi fung":
-               echo 'Pizza Fungi 🍕' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
+               echo 'Pizza Fungi 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
          break;
          case "Pi Mari":
-               echo 'Pizza Marina 🍕' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
+               echo 'Pizza Marina 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
          break;
          case "Pi Hawa":
-                echo 'Pizza Hawaii 🍕' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
+                echo 'Pizza Hawaii 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
          break;
          case "Pi Quat":
-                echo 'Pizza Quattro Formaggi 🍕' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
+                echo 'Pizza Quattro Formaggi 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
          break;
         }
  ?>
