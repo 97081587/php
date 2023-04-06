@@ -63,7 +63,7 @@ if(isset($_POST["submit"])){
    <div class="Bdatum">
       <label for="Bdatum">Besteldatum:</label>
       <br>
-      <input type="date" id="Bdatum" name="Bdatum" value="15-03-2023" min="15-03-2023" max="24-04-2023">
+      <input type="date" id="Bdatum" name="Bdatum" value="2023-03-15" min="2023-03-15" max="2023-04-24">
    </div>
  <div class="BeOfAf">
    <label for="BeOfAf">bezorgen of afhalen?</label>
@@ -79,7 +79,7 @@ if(isset($_POST["submit"])){
       <br>
     <select name="pizza" required>
       <option value=""<?php if($Pizza==''){ echo "selected";}?>disabled> Maak uw keuze</option>
-      <option value="Pi Marg"<?php if($Pizza=='Pi Marg'){ echo "selected";}?>>Pizza Margherita 🍕</option>
+      <option value="Pi Marg"<?php if($Pizza=='Pi Marg'){ echo "selected";}?>>Pizza Margherita 🌿🍕</option>
       <option value="Pi fung"<?php if($Pizza=='Pi fung'){ echo "selected";}?>>Pizza Fungi 🍄🍕</option>
       <option value="Pi Mari"<?php if($Pizza=='Pi Mari'){ echo "selected";}?>>Pizza Marina 🐟🍕</option>
       <option value="Pi Hawa"<?php if($Pizza=='Pi Hawa'){ echo "selected";}?>>Pizza Hawaii 🍍🍕</option>
@@ -95,7 +95,7 @@ if(isset($_POST["submit"])){
 $Pizza == ""; 
   switch ($Pizza){ 
          case "Pi Marg":
-               echo 'Pizza Margherita 🍕';
+               echo 'Pizza Margherita 🌿🍕';
                echo "<br>";
                echo $fname;
                echo "<br>";
