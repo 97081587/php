@@ -82,10 +82,10 @@ if(isset($_POST["submit"])){
     <select name="pizza" required>
       <option value=""<?php if($Pizza==''){ echo "selected";}?>disabled> Maak uw keuze</option>
       <option value="Pi Marg"<?php if($Pizza=='Pi Marg'){ echo "selected";}?>>Pizza Margherita 🍕</option>
-      <option value="Pi fung"<?php if($Pizza=='Pi fung'){ echo "selected";}?>>Pizza Fungi 🍕</option>
-      <option value="Pi Mari"<?php if($Pizza=='Pi Mari'){ echo "selected";}?>>Pizza Marina 🍕</option>
-      <option value="Pi Hawa"<?php if($Pizza=='Pi Hawa'){ echo "selected";}?>>Pizza Hawai 🍕</option>
-      <option value="Pi Quat"<?php if($Pizza=='Pi Quat'){ echo "selected";}?>>Pizza Quattro Formaggi 🍕</option>
+      <option value="Pi fung"<?php if($Pizza=='Pi fung'){ echo "selected";}?>>Pizza Fungi 🍄🍕</option>
+      <option value="Pi Mari"<?php if($Pizza=='Pi Mari'){ echo "selected";}?>>Pizza Marina 🐟🍕</option>
+      <option value="Pi Hawa"<?php if($Pizza=='Pi Hawa'){ echo "selected";}?>>Pizza Hawai 🍍🍕</option>
+      <option value="Pi Quat"<?php if($Pizza=='Pi Quat'){ echo "selected";}?>>Pizza Quattro Formaggi 🧀🍕</option>
     </select>
 </div>
 <br>
