@@ -12,7 +12,7 @@ if(isset($_POST["submit"])){
     $Pcode = $_POST["pcode"];
     $plaats = $_POST["plaats"];
     $Bdatum = $_POST["Bdatum"];
-    $BeOfAf = $_POST["BeOfAf"];
+    $BeOfAf = $_POST["Bezorgen"];
     $Pizza = $_POST["pizza"];
 }
 ?>
@@ -71,10 +71,10 @@ if(isset($_POST["submit"])){
   <div class="BeOfAf">
     <label for="BeOfAf">bezorgen of afhalen?</label>
     <br>
-    <label for="BeOfAf">bezorgen</label>
-    <input type="radio" id="Bezorgen" name="BeOfAf" value="">
-    <label for="BeOfAf">afhalen</label>
-    <input type="radio" id="Afhalen" name="BeOfAf" value="">
+    <label>bezorgen</label>
+    <input type="radio" id="Bezorgen" name="Bezorgen" value="">
+    <label>afhalen</label>
+    <input type="radio" id="Afhalen" name="Afhalen" value="">
     <br>
   </div>
  <div class="pizza">
