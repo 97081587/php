@@ -26,12 +26,11 @@ if(isset($_POST["submit"])){
     <title>Home of the world's most delicious pizza 🍕🍕🍕</title>
     <link rel="icon" href="pizza.png">
     <link href="pizza.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<h1>pizza di mama 🍕</h1>
+<h1>pizza di mama. 🍕</h1>
   <form method=post action="">
    <div class="fname">
      <label for="fname">Voornaam:</label>
