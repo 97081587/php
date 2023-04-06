@@ -26,6 +26,8 @@ if(isset($_POST["submit"])){
     <title>Home of the world's most delicious pizza 🍕🍕🍕</title>
     <link rel="icon" href="pizza.png">
     <link href="pizza.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -89,14 +91,14 @@ if(isset($_POST["submit"])){
 </div>
 <br>
 <input type="submit" name="submit" value="gegevens versturen" />
-</form>  
+</form>
 </body>
 <br>
 <?php
 $Pizza == ""; 
   switch ($Pizza){ 
          case "Pi Marg":
-               echo 'Pizza Margherita 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
+               echo "Pizza Margherita 🍕" .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
          break;
          case "Pi fung":
                echo 'Pizza Fungi 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
