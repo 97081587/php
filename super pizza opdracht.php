@@ -63,7 +63,7 @@ if(isset($_POST["submit"])){
    <div class="Bdatum">
       <label for="Bdatum">Besteldatum:</label>
       <br>
-      <input type="date" id="Bdatum" name="Bdatum" value="2023-03-15" min="2023-03-15" max="2023-04-24">
+      <input type="date" id="Bdatum" name="Bdatum" value="15-03-2023" min="15-03-2023" max="24-04-2023">
    </div>
  <div class="BeOfAf">
    <label for="BeOfAf">bezorgen of afhalen?</label>
