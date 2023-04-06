@@ -7,13 +7,13 @@ $Bdatum = '';
 $BeOfAf = '';
 $Pizza = '';
 if(isset($_POST["submit"])){
-      $fname = $_POST["fname"];
-      $adres = $_POST["adres"];
-      $Pcode = $_POST["pcode"];
-      $plaats = $_POST["plaats"];
-      $Bdatum = $_POST["Bdatum"];
-      $BeOfAf = $_POST["BeOfAf"];
-      $Pizza = $_POST["pizza"];
+    $fname = $_POST["fname"];
+    $adres = $_POST["adres"];
+    $Pcode = $_POST["pcode"];
+    $plaats = $_POST["plaats"];
+    $Bdatum = $_POST["Bdatum"];
+    $BeOfAf = $_POST["BeOfAf"];
+    $Pizza = $_POST["pizza"];
 }
 ?>
 
@@ -69,11 +69,9 @@ if(isset($_POST["submit"])){
    <label for="BeOfAf">bezorgen of afhalen?</label>
    <br>
    <label for="BeOfAf">bezorgen</label>
-   <input type="radio" id="BeOfAf" name="BeOfAf"
-     placeholder="BeOfAf" value="">
+   <input type="radio" id="Bezorgen" name="BeOfAf" value="">
    <label for="BeOfAf">afhalen</label>
-   <input type="radio" id="BeOfAf" name="BeOfAf"
-     placeholder="BeOfAf" value="">
+   <input type="radio" id="Afhalen" name="BeOfAf" value="">
    <br>
  </div>
 <div class="pizza">
@@ -84,7 +82,7 @@ if(isset($_POST["submit"])){
       <option value="Pi Marg"<?php if($Pizza=='Pi Marg'){ echo "selected";}?>>Pizza Margherita 🍕</option>
       <option value="Pi fung"<?php if($Pizza=='Pi fung'){ echo "selected";}?>>Pizza Fungi 🍄🍕</option>
       <option value="Pi Mari"<?php if($Pizza=='Pi Mari'){ echo "selected";}?>>Pizza Marina 🐟🍕</option>
-      <option value="Pi Hawa"<?php if($Pizza=='Pi Hawa'){ echo "selected";}?>>Pizza Hawai 🍍🍕</option>
+      <option value="Pi Hawa"<?php if($Pizza=='Pi Hawa'){ echo "selected";}?>>Pizza Hawaii 🍍🍕</option>
       <option value="Pi Quat"<?php if($Pizza=='Pi Quat'){ echo "selected";}?>>Pizza Quattro Formaggi 🧀🍕</option>
     </select>
 </div>
@@ -97,19 +95,79 @@ if(isset($_POST["submit"])){
 $Pizza == ""; 
   switch ($Pizza){ 
          case "Pi Marg":
-               echo "Pizza Margherita 🍕" .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
+               echo 'Pizza Margherita 🍕';
+               echo "<br>";
+               echo $fname;
+               echo "<br>";
+               echo $adres;
+               echo "<br>";
+               echo $Pcode;
+               echo "<br>";
+               echo $plaats;
+               echo "<br>";
+               echo $Bdatum;
+               echo "<br>";
+               echo $BeOfAf;
          break;
          case "Pi fung":
-               echo 'Pizza Fungi 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
+               echo 'Pizza Fungi 🍄🍕 ';
+               echo "<br>";
+               echo $fname;
+               echo "<br>";
+               echo $adres;
+               echo "<br>";
+               echo $Pcode;
+               echo "<br>";
+               echo $plaats;
+               echo "<br>";
+               echo $Bdatum;
+               echo "<br>";
+               echo $BeOfAf;
          break;
          case "Pi Mari":
-               echo 'Pizza Marina 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
+               echo 'Pizza Marina 🐟🍕 ';
+               echo "<br>";
+               echo $fname;
+               echo "<br>";
+               echo $adres;
+               echo "<br>";
+               echo $Pcode;
+               echo "<br>";
+               echo $plaats;
+               echo "<br>";
+               echo $Bdatum;
+               echo "<br>";
+               echo $BeOfAf;
          break;
          case "Pi Hawa":
-                echo 'Pizza Hawaii 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
+                echo 'Pizza Hawaii 🍍🍕 ';
+                echo "<br>";
+                echo $fname;
+                echo "<br>";
+                echo $adres;
+                echo "<br>";
+                echo $Pcode;
+                echo "<br>";
+                echo $plaats;
+                echo "<br>";
+                echo $Bdatum;
+                echo "<br>";
+                echo $BeOfAf;
          break;
          case "Pi Quat":
-                echo 'Pizza Quattro Formaggi 🍕 ' .$fname .$adres .$Pcode .$plaats .$Bdatum .$BeOfAf;
+                echo 'Pizza Quattro Formaggi 🧀🍕 ';
+                echo "<br>";
+                echo $fname;
+                echo "<br>";
+                echo $adres;
+                echo "<br>";
+                echo $Pcode;
+                echo "<br>";
+                echo $plaats;
+                echo "<br>";
+                echo $Bdatum;
+                echo "<br>";
+                echo $BeOfAf;
          break;
         }
  ?>
