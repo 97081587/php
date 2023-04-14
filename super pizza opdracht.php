@@ -72,9 +72,9 @@ if(isset($_POST["submit"])){
       <label for="BeOfAf">bezorgen of afhalen?</label>
       <br>
       <label>bezorgen</label>
-      <input type="radio" id="Bezorgen" name="Bezorgen" value="">
+      <input type="radio" id="Bezorgen" name="Bezorgen" value="Bezorgen">
       <label>afhalen</label>
-      <input type="radio" id="Afhalen" name="Afhalen" value="">
+      <input type="radio" id="Afhalen" name="Afhalen" value="Afhalen">
       <br>
     </div>
    <div class="pizza">
