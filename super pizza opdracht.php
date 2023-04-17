@@ -66,7 +66,7 @@ if(isset($_POST["submit"])){
       <div class="Bdatum">
          <label for="Bdatum">Besteldatum:</label>
          <br>
-         <input type="date" id="Bdatum" name="Bdatum" value="2023-03-15" min="2023-03-15" max="2023-04-24">
+         <input type="date" id="Bdatum" name="Bdatum" value=$currentDate>
       </div>
     <div class="BeOfAf">
       <label for="BeOfAf">bezorgen of afhalen?</label>
@@ -98,6 +98,9 @@ if(isset($_POST["submit"])){
 
 <div class=gegevens>
  <?php
+ $timestamp = time();
+ $currentDate = date('Y-m-d');
+
  $Pizza == ""; 
    switch ($Pizza){ 
           case "Pi Marg":
