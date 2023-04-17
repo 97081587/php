@@ -66,7 +66,7 @@ if(isset($_POST["submit"])){
       <div class="Bdatum">
          <label for="Bdatum">Besteldatum:</label>
          <br>
-         <input type="date" id="Bdatum" name="Bdatum" value=$currentDate>
+         <input type="date" id="Bdatum" name="Bdatum" value=$currentDate min=$currentDate>
       </div>
     <div class="BeOfAf">
       <label for="BeOfAf">bezorgen of afhalen?</label>
