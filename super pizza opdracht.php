@@ -114,8 +114,7 @@ if(isset($_POST["submit"])){
                echo "<br>";
                echo $plaats;
                echo "<br>";
-               echo $BeOfAf;
-               echo date ('l');
+               echo $Bdatum;
                echo "<br>";
                if ("Bezorgen" == "Bezorgen"){
                   echo "Bezorgen";
