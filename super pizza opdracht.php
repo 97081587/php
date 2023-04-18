@@ -12,7 +12,7 @@ if(isset($_POST["submit"])){
     $Pcode = $_POST["pcode"];
     $plaats = $_POST["plaats"];
     $Bdatum = $_POST["Bdatum"];
-    $BeOfAf = $_POST["Bezorgen"];
+    $BeOfAf = $_POST["BeOfAf"];
     $Pizza = $_POST["pizza"];
 }
 ?>
@@ -72,11 +72,9 @@ if(isset($_POST["submit"])){
       <label for="BeOfAf">bezorgen of afhalen?</label>
       <br>
       <label>bezorgen</label>
-      <input type="radio" id="Bezorgen" name="Bezorgen"
-      placeholder="Bezorgen" value="">
+      <input type="radio" id="Bezorgen" name="BeOfAf" value="">
       <label>afhalen</label>
-      <input type="radio" id="Afhalen" name="Afhalen"
-      placeholder="Afhalen" value="">
+      <input type="radio" id="Afhalen" name="BeOfAf" value="">
       <br>
     </div>
    <div class="pizza">
@@ -116,9 +114,14 @@ if(isset($_POST["submit"])){
                echo "<br>";
                echo $plaats;
                echo "<br>";
-               echo $Bdatum;
-               echo "<br>";
                echo $BeOfAf;
+               echo date ('l');
+               echo "<br>";
+               if ("Bezorgen" == "Bezorgen"){
+                  echo "Bezorgen";
+               } else {
+                  echo "Afhalen";
+               }
           break;
           case "Pi fung":
                echo 'Pizza Fungi 🍄🍕 ';
