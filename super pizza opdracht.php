@@ -35,6 +35,15 @@ if(isset($_POST["submit"])){
  </div>
    <div class=form>
     <form method=post action="">
+    <div class="BeOfAf">
+      <label for="BeOfAf">bezorgen of afhalen?</label>
+      <br>
+      <label>bezorgen</label>
+      <input type="radio" name="BeOfAf" value="Bezorgen">
+      <label>afhalen</label>
+      <input type="radio" name="BeOfAf" value="Afhalen">
+      <br>
+    </div>
       <div class="fname">
         <label for="fname">Voornaam:</label>
         <br>
@@ -64,19 +73,10 @@ if(isset($_POST["submit"])){
          <br>
        </div>
       <div class="Bdatum">
-         <label for="Bdatum">Besteldatum:</label>
+         <label for="Bdatum">Bestel/afhaal datum:</label>
          <br>
          <input type="date" id="Bdatum" name="Bdatum">
       </div>
-    <div class="BeOfAf">
-      <label for="BeOfAf">bezorgen of afhalen?</label>
-      <br>
-      <label>bezorgen</label>
-      <input type="radio" name="BeOfAf" value="Bezorgen">
-      <label>afhalen</label>
-      <input type="radio" name="BeOfAf" value="Afhalen">
-      <br>
-    </div>
    <div class="pizza">
       Pizza:
       <br>
@@ -88,6 +88,11 @@ if(isset($_POST["submit"])){
          <option value="Pi Hawa"<?php if($Pizza=='Pi Hawa'){ echo "selected";}?>>Pizza Hawaii 🍍🍕</option>
          <option value="Pi Quat"<?php if($Pizza=='Pi Quat'){ echo "selected";}?>>Pizza Quattro Formaggi 🧀🍕</option>
        </select>
+       <select name="hoeveelheid" required>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='∞'>∞</option>
    </div>
       <br>
       <input type="submit" name="submit" value="gegevens versturen" />
@@ -122,7 +127,7 @@ if(isset($_POST["submit"])){
                 if(!empty($_POST['BeOfAf'])) {
                  echo '  ' . $_POST['BeOfAf'];
                 } else {
-                 echo 'Geen keuze';
+                 echo 'Geen keuze gemaakt';
                 }
               }
           break;
@@ -145,7 +150,7 @@ if(isset($_POST["submit"])){
                 if(!empty($_POST['BeOfAf'])) {
                  echo '  ' . $_POST['BeOfAf'];
                 } else {
-                 echo 'Geen keuze';
+                 echo 'Geen keuze gemaakt';
                 }
               }
           break;
@@ -168,7 +173,7 @@ if(isset($_POST["submit"])){
                 if(!empty($_POST['BeOfAf'])) {
                  echo '  ' . $_POST['BeOfAf'];
                 } else {
-                 echo 'Geen keuze';
+                 echo 'Geen keuze gemaakt';
                 }
               }
           break;
@@ -191,7 +196,7 @@ if(isset($_POST["submit"])){
                   if(!empty($_POST['BeOfAf'])) {
                    echo '  ' . $_POST['BeOfAf'];
                   } else {
-                   echo 'Geen keuze';
+                   echo 'Geen keuze gemaakt';
                   }
               }
           break;
@@ -214,7 +219,7 @@ if(isset($_POST["submit"])){
                   if(!empty($_POST['BeOfAf'])) {
                    echo '  ' . $_POST['BeOfAf'];
                   } else {
-                   echo 'Geen keuze';
+                   echo 'Geen keuze gemaakt';
                   }
               }
           break;
