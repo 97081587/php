@@ -105,6 +105,7 @@ if(isset($_POST["submit"])){
  <?php
  $date = $Bdatum;
  $newDate = date ('l', strtotime($date));
+ 
 
  $Pizza == ""; 
    switch ($Pizza){ 
