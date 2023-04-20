@@ -72,9 +72,9 @@ if(isset($_POST["submit"])){
       <label for="BeOfAf">bezorgen of afhalen?</label>
       <br>
       <label>bezorgen</label>
-      <input type="radio" id="Bezorgen" name="BeOfAf" value="">
+      <input type="radio" name="BeOfAf" value="Bezorgen">
       <label>afhalen</label>
-      <input type="radio" id="Afhalen" name="BeOfAf" value="">
+      <input type="radio" name="BeOfAf" value="Afhalen">
       <br>
     </div>
    <div class="pizza">
@@ -116,11 +116,13 @@ if(isset($_POST["submit"])){
                echo "<br>";
                echo $Bdatum;
                echo "<br>";
-               if ("Bezorgen" == "Bezorgen"){
-                  echo "Bezorgen";
-               } else {
-                  echo "Afhalen";
-               }
+               if(isset($_POST['submit'])){
+                if(!empty($_POST['BeOfAf'])) {
+                 echo '  ' . $_POST['BeOfAf'];
+                } else {
+                 echo 'Geen keuze';
+                }
+              }
           break;
           case "Pi fung":
                echo 'Pizza Fungi 🍄🍕 ';
@@ -135,7 +137,13 @@ if(isset($_POST["submit"])){
                echo "<br>";
                echo $Bdatum;
                echo "<br>";
-               echo $BeOfAf;
+               if(isset($_POST['submit'])){
+                if(!empty($_POST['BeOfAf'])) {
+                 echo '  ' . $_POST['BeOfAf'];
+                } else {
+                 echo 'Geen keuze';
+                }
+              }
           break;
           case "Pi Mari":
                echo 'Pizza Marina 🐟🍕 ';
@@ -150,7 +158,13 @@ if(isset($_POST["submit"])){
                echo "<br>";
                echo $Bdatum;
                echo "<br>";
-               echo $BeOfAf;
+               if(isset($_POST['submit'])){
+                if(!empty($_POST['BeOfAf'])) {
+                 echo '  ' . $_POST['BeOfAf'];
+                } else {
+                 echo 'Geen keuze';
+                }
+              }
           break;
           case "Pi Hawa":
                 echo 'Pizza Hawaii 🍍🍕 ';
@@ -165,7 +179,13 @@ if(isset($_POST["submit"])){
                 echo "<br>";
                 echo $Bdatum;
                 echo "<br>";
-                echo $BeOfAf;
+                if(isset($_POST['submit'])){
+                  if(!empty($_POST['BeOfAf'])) {
+                   echo '  ' . $_POST['BeOfAf'];
+                  } else {
+                   echo 'Geen keuze';
+                  }
+              }
           break;
           case "Pi Quat":
                 echo 'Pizza Quattro Formaggi 🧀🍕 ';
@@ -180,7 +200,13 @@ if(isset($_POST["submit"])){
                 echo "<br>";
                 echo $Bdatum;
                 echo "<br>";
-                echo $BeOfAf;
+                if(isset($_POST['submit'])){
+                  if(!empty($_POST['BeOfAf'])) {
+                   echo '  ' . $_POST['BeOfAf'];
+                  } else {
+                   echo 'Geen keuze';
+                  }
+              }
           break;
          }
  ?>
