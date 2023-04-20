@@ -98,7 +98,7 @@ if(isset($_POST["submit"])){
 
 <div class=gegevens>
  <?php
- $date = " ";
+ $date = $BeOfAf;
  $newDate = date ('l', strtotime($date));
 
  $Pizza == ""; 
