@@ -66,7 +66,7 @@ if(isset($_POST["submit"])){
       <div class="Bdatum">
          <label for="Bdatum">Besteldatum:</label>
          <br>
-         <input type="date" id="Bdatum" name="Bdatum" value=$currentDate min=$currentDate>
+         <input type="date" id="Bdatum" name="Bdatum">
       </div>
     <div class="BeOfAf">
       <label for="BeOfAf">bezorgen of afhalen?</label>
@@ -98,8 +98,8 @@ if(isset($_POST["submit"])){
 
 <div class=gegevens>
  <?php
- $timestamp = time();
- $currentDate = date('Y-m-d');
+ $date = " ";
+ $newDate = date ('l', strtotime($date));
 
  $Pizza == ""; 
    switch ($Pizza){ 
@@ -115,6 +115,8 @@ if(isset($_POST["submit"])){
                echo $plaats;
                echo "<br>";
                echo $Bdatum;
+               echo "<br>";
+               echo $newDate;
                echo "<br>";
                if(isset($_POST['submit'])){
                 if(!empty($_POST['BeOfAf'])) {
