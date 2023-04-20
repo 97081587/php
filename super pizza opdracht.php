@@ -98,7 +98,7 @@ if(isset($_POST["submit"])){
 
 <div class=gegevens>
  <?php
- $date = $BeOfAf;
+ $date = $Bdatum;
  $newDate = date ('l', strtotime($date));
 
  $Pizza == ""; 
@@ -139,6 +139,8 @@ if(isset($_POST["submit"])){
                echo "<br>";
                echo $Bdatum;
                echo "<br>";
+               echo $newDate;
+               echo "<br>";
                if(isset($_POST['submit'])){
                 if(!empty($_POST['BeOfAf'])) {
                  echo '  ' . $_POST['BeOfAf'];
@@ -159,6 +161,8 @@ if(isset($_POST["submit"])){
                echo $plaats;
                echo "<br>";
                echo $Bdatum;
+               echo "<br>";
+               echo $newDate;
                echo "<br>";
                if(isset($_POST['submit'])){
                 if(!empty($_POST['BeOfAf'])) {
@@ -181,6 +185,8 @@ if(isset($_POST["submit"])){
                 echo "<br>";
                 echo $Bdatum;
                 echo "<br>";
+                echo $newDate;
+                echo "<br>";
                 if(isset($_POST['submit'])){
                   if(!empty($_POST['BeOfAf'])) {
                    echo '  ' . $_POST['BeOfAf'];
@@ -201,6 +207,8 @@ if(isset($_POST["submit"])){
                 echo $plaats;
                 echo "<br>";
                 echo $Bdatum;
+                echo "<br>";
+                echo $newDate;
                 echo "<br>";
                 if(isset($_POST['submit'])){
                   if(!empty($_POST['BeOfAf'])) {
