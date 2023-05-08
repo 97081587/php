@@ -119,7 +119,7 @@ if(isset($_POST["submit"])){
  $Pizza == ""; 
    switch ($Pizza){ 
           case "Pi Marg":
-               echo $hoeveelheid;
+               echo $hoeveelheid ."stuks";
                echo 'Pizza Margherita 🌿🍕';
                echo "<br>";
                echo $fname;
