@@ -6,6 +6,7 @@ $plaats = '';
 $Bdatum = '';
 $BeOfAf = '';
 $Pizza = '';
+$hoeveelheid= '';
 if(isset($_POST["submit"])){
     $fname = $_POST["fname"];
     $adres = $_POST["adres"];
@@ -14,6 +15,7 @@ if(isset($_POST["submit"])){
     $Bdatum = $_POST["Bdatum"];
     $BeOfAf = $_POST["BeOfAf"];
     $Pizza = $_POST["pizza"];
+    $hoeveelheid = $_POST["hoeveelheid"];
 }
 ?>
 
@@ -89,17 +91,17 @@ if(isset($_POST["submit"])){
          <option value="Pi Quat"<?php if($Pizza=='Pi Quat'){ echo "selected";}?>>Pizza Quattro Formaggi 🧀🍕</option>
        </select>
        <select name="hoeveelheid" required>
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>3</option>
-        <option value='4'>4</option>
-        <option value='5'>5</option>
-        <option value='6'>6</option>
-        <option value='7'>7</option>
-        <option value='8'>8</option>
-        <option value='9'>9</option>
-        <option value='10'>10</option>
-        <option value='∞'>∞</option>
+        <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
+        <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
+        <option value='3'<?php if($hoeveelheid=='3'){ echo "selected";}?>>3</option>
+        <option value='4'<?php if($hoeveelheid=='4'){ echo "selected";}?>>4</option>
+        <option value='5'<?php if($hoeveelheid=='5'){ echo "selected";}?>>5</option>
+        <option value='6'<?php if($hoeveelheid=='6'){ echo "selected";}?>>6</option>
+        <option value='7'<?php if($hoeveelheid=='7'){ echo "selected";}?>>7</option>
+        <option value='8'<?php if($hoeveelheid=='8'){ echo "selected";}?>>8</option>
+        <option value='9'<?php if($hoeveelheid=='9'){ echo "selected";}?>>9</option>
+        <option value='10'<?php if($hoeveelheid=='10'){ echo "selected";}?>>10</option>
+        <option value='∞'<?php if($hoeveelheid=='∞'){ echo "selected";}?>>∞</option>
    </div>
       <br>
       <input type="submit" name="submit" value="gegevens versturen" />
@@ -117,6 +119,7 @@ if(isset($_POST["submit"])){
  $Pizza == ""; 
    switch ($Pizza){ 
           case "Pi Marg":
+               echo $hoeveelheid;
                echo 'Pizza Margherita 🌿🍕';
                echo "<br>";
                echo $fname;
@@ -140,6 +143,7 @@ if(isset($_POST["submit"])){
               }
           break;
           case "Pi fung":
+               echo $hoeveelheid;
                echo 'Pizza Fungi 🍄🍕 ';
                echo "<br>";
                echo $fname;
@@ -163,6 +167,7 @@ if(isset($_POST["submit"])){
               }
           break;
           case "Pi Mari":
+               echo $hoeveelheid;
                echo 'Pizza Marina 🐟🍕 ';
                echo "<br>";
                echo $fname;
@@ -186,6 +191,7 @@ if(isset($_POST["submit"])){
               }
           break;
           case "Pi Hawa":
+                echo $hoeveelheid;
                 echo 'Pizza Hawaii 🍍🍕 ';
                 echo "<br>";
                 echo $fname;
@@ -209,6 +215,7 @@ if(isset($_POST["submit"])){
               }
           break;
           case "Pi Quat":
+                echo $hoeveelheid;
                 echo 'Pizza Quattro Formaggi 🧀🍕 ';
                 echo "<br>";
                 echo $fname;
