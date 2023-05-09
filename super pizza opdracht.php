@@ -118,7 +118,7 @@ if(isset($_POST["submit"])){
 
    switch ($Pizza){ 
           case "Pi Marg":
-               echo $hoeveelheid .' stuks Pizza Margherita 🌿🍕';
+               echo $hoeveelheid .' stuks Pizza Margherita 🌿🍕 ' .$prijsPMarina;
                echo "<br>";
                echo $fname;
                echo "<br>";
