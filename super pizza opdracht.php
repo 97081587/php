@@ -116,10 +116,9 @@ if(isset($_POST["submit"])){
  $newDate = date ('l', strtotime($date));
  
 
- $Pizza == ""; 
    switch ($Pizza){ 
           case "Pi Marg":
-               echo $hoeveelheid ."stuks".'Pizza Margherita 🌿🍕';
+               echo $hoeveelheid .' stuks Pizza Margherita 🌿🍕';
                echo "<br>";
                echo $fname;
                echo "<br>";
@@ -142,8 +141,7 @@ if(isset($_POST["submit"])){
               }
           break;
           case "Pi fung":
-               echo $hoeveelheid;
-               echo 'Pizza Fungi 🍄🍕 ';
+               echo $hoeveelheid.' stuks Pizza Fungi 🍄🍕 ';
                echo "<br>";
                echo $fname;
                echo "<br>";
@@ -166,8 +164,7 @@ if(isset($_POST["submit"])){
               }
           break;
           case "Pi Mari":
-               echo $hoeveelheid;
-               echo 'Pizza Marina 🐟🍕 ';
+               echo $hoeveelheid .' stuks Pizza Marina 🐟🍕 ';
                echo "<br>";
                echo $fname;
                echo "<br>";
@@ -190,8 +187,7 @@ if(isset($_POST["submit"])){
               }
           break;
           case "Pi Hawa":
-                echo $hoeveelheid;
-                echo 'Pizza Hawaii 🍍🍕 ';
+                echo $hoeveelheid .' stuks Pizza Hawaii 🍍🍕 ';
                 echo "<br>";
                 echo $fname;
                 echo "<br>";
@@ -214,8 +210,7 @@ if(isset($_POST["submit"])){
               }
           break;
           case "Pi Quat":
-                echo $hoeveelheid;
-                echo 'Pizza Quattro Formaggi 🧀🍕 ';
+                echo $hoeveelheid .' stuks Pizza Quattro Formaggi 🧀🍕 ';
                 echo "<br>";
                 echo $fname;
                 echo "<br>";
