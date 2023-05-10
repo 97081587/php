@@ -5,7 +5,11 @@ $Pcode = '';
 $plaats = '';
 $Bdatum = '';
 $BeOfAf = '';
-$Pizza = '';
+$PrijsPMargherita = '€12,50';
+$PrijsPFungi = '€12,50';
+$PrijsPMarina = '€13,50';
+$PrijsPHawaii = '€11,50';
+$PrijsPQFormaggi = '€14,50';
 $hoeveelheid= '';
 if(isset($_POST["submit"])){
     $fname = $_POST["fname"];
@@ -46,8 +50,8 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
            <td>Pizza Margherita 🌿🍕</td>
-           <td><?php $PrijsPMargherita ?>
-           <select name="hoeveelheid" required>
+           <td><?php echo $PrijsPMargherita ?>
+           <select name="hoeveelheidMargherita" required>
            <option value='0'<?php if($hoeveelheid=='0'){ echo "selected";}?>>0</option>
            <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
            <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
@@ -64,8 +68,8 @@ if(isset($_POST["submit"])){
           </tr>          
           <tr>
            <td>Pizza Fungi 🍄🍕</td>
-           <td><?php $PrijsPFungi ?>
-           <select name="hoeveelheid" required>
+           <td><?php echo $PrijsPFungi ?>
+           <select name="hoeveelheidFungi" required>
            <option value='0'<?php if($hoeveelheid=='0'){ echo "selected";}?>>0</option>
            <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
            <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
@@ -82,8 +86,8 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
            <td>Pizza Marina 🐟🍕</td>
-           <td><?php $PrijsPMarina ?>
-           <select name="hoeveelheid" required>
+           <td><?php echo $PrijsPMarina ?>
+           <select name="hoeveelheidMarina" required>
            <option value='0'<?php if($hoeveelheid=='0'){ echo "selected";}?>>0</option>
            <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
            <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
@@ -100,8 +104,8 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
            <td>Pizza Hawaii 🍍🍕</td>
-           <td><?php $PrijsPHawaii ?>
-           <select name="hoeveelheid" required>
+           <td><?php echo $PrijsPHawaii ?>
+           <select name="hoeveelheidHawaii" required>
            <option value='0'<?php if($hoeveelheid=='0'){ echo "selected";}?>>0</option>
            <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
            <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
@@ -118,8 +122,8 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
             <td>Pizza Quattro Formaggi 🧀🍕</td>
-            <td><?php $PrijsPQFormaggi ?>
-            <select name="hoeveelheid" required>
+            <td><?php echo $PrijsPQFormaggi ?>
+            <select name="hoeveelheidQFormaggi" required>
             <option value='0'<?php if($hoeveelheid=='0'){ echo "selected";}?>>0</option>
             <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
             <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
@@ -186,23 +190,26 @@ if(isset($_POST["submit"])){
 
 <div class=gegevens>
  <?php
- $date = $Bdatum;
- $newDate = date ('l', strtotime($date));
- 
+ if($isset($_POST['submit'])){
+  $date = $Bdatum;
+  $newDate = date ('l', strtotime($date));
+  $hoveelheidMargherita = $_POST['hoeveelheidMargherita'];
+  $hoeveelheidFungi = $_POST['hoeveelheidFungi'];
+  $hoeveelheidMarina = $_POST['hoveelMarina'];
+  $hoeveelheidHawaii = $_POST['hoeveelheidHawaii'];
+  $hoeveelheidQFormaggi = $_POST['hoeveelheidQFormaggi'];
 
-   switch ($Pizza){ 
-          case "Pi Marg":
-               echo $hoeveelheid .' stuks Pizza Margherita 🌿🍕 ';
+               echo $hoeveelheid .' stuks Pizza ';
                echo "<br>";
-               echo 'Voornaam: '.$fname;
+               echo 'Voornaam: '.$_POST['fname'];
                echo "<br>";
-               echo 'Adres: '.$adres;
+               echo 'Adres: '.$_POST['$adres'];
                echo "<br>";
-               echo 'Postcode: '.$Pcode;
+               echo 'Postcode: '.$_POST['$Pcode'];
                echo "<br>";
-               echo 'Plaats: '.$plaats;
+               echo 'Plaats: '.$_POST['$plaats'];
                echo "<br>";
-               echo 'Bestel/afhaal datum: '.$Bdatum;
+               echo 'Bestel/afhaal datum: '.$_POST['$Bdatum'];
                echo "<br>";
                echo $newDate;
                echo "<br>";
@@ -213,100 +220,7 @@ if(isset($_POST["submit"])){
                  echo 'Geen keuze gemaakt';
                 }
               }
-          break;
-          case "Pi fung":
-               echo $hoeveelheid.' stuks Pizza Fungi 🍄🍕 ';
-               echo "<br>";
-               echo 'Voornaam: '.$fname;
-               echo "<br>";
-               echo 'Adres: '.$adres;
-               echo "<br>";
-               echo 'Postcode: '.$Pcode;
-               echo "<br>";
-               echo 'Plaats: '.$plaats;
-               echo "<br>";
-               echo 'Bestel/afhaal datum: '.$Bdatum;
-               echo "<br>";
-               echo $newDate;
-               echo "<br>";
-               if(isset($_POST['submit'])){
-                if(!empty($_POST['BeOfAf'])) {
-                 echo '  ' . $_POST['BeOfAf'];
-                } else {
-                 echo 'Geen keuze gemaakt';
-                }
-              }
-          break;
-          case "Pi Mari":
-               echo $hoeveelheid .' stuks Pizza Marina 🐟🍕 ';
-               echo "<br>";
-               echo 'Voornaam: '.$fname;
-               echo "<br>";
-               echo 'Adres: '.$adres;
-               echo "<br>";
-               echo 'Postcode: '.$Pcode;
-               echo "<br>";
-               echo 'Plaats: '.$plaats;
-               echo "<br>";
-               echo 'Bestel/afhaal datum: '.$Bdatum;
-               echo "<br>";
-               echo $newDate;
-               echo "<br>";
-               if(isset($_POST['submit'])){
-                if(!empty($_POST['BeOfAf'])) {
-                 echo '  ' . $_POST['BeOfAf'];
-                } else {
-                 echo 'Geen keuze gemaakt';
-                }
-              }
-          break;
-          case "Pi Hawa":
-                echo $hoeveelheid .' stuks Pizza Hawaii 🍍🍕 ';
-                echo "<br>";
-                echo 'Voornaam: '.$fname;
-                echo "<br>";
-                echo 'Adres: '.$adres;
-                echo "<br>";
-                echo 'Postcode: '.$Pcode;
-                echo "<br>";
-                echo 'Plaats: '.$plaats;
-                echo "<br>";
-                echo 'Bestel/afhaal datum: '.$Bdatum;
-                echo "<br>";
-                echo $newDate;
-                echo "<br>";
-                if(isset($_POST['submit'])){
-                  if(!empty($_POST['BeOfAf'])) {
-                   echo '  ' . $_POST['BeOfAf'];
-                  } else {
-                   echo 'Geen keuze gemaakt';
-                  }
-              }
-          break;
-          case "Pi Quat":
-                echo $hoeveelheid .' stuks Pizza Quattro Formaggi 🧀🍕 ';
-                echo "<br>";
-                echo 'Voornaam: '.$fname;
-                echo "<br>";
-                echo 'Adres: '.$adres;
-                echo "<br>";
-                echo 'Postcode: '.$Pcode;
-                echo "<br>";
-                echo 'Plaats: '.$plaats;
-                echo "<br>";
-                echo 'Bestel/afhaal datum: '.$Bdatum;
-                echo "<br>";
-                echo $newDate;
-                echo "<br>";
-                if(isset($_POST['submit'])){
-                  if(!empty($_POST['BeOfAf'])) {
-                   echo '  ' . $_POST['BeOfAf'];
-                  } else {
-                   echo 'Geen keuze gemaakt';
-                  }
-              }
-          break;
-         }
+            }
  ?>
 </div>
 </html>
