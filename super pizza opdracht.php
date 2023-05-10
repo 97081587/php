@@ -118,17 +118,17 @@ if(isset($_POST["submit"])){
 
    switch ($Pizza){ 
           case "Pi Marg":
-               echo $hoeveelheid .' stuks Pizza Margherita 🌿🍕 ' .$prijsPMarina;
+               echo $hoeveelheid .' stuks Pizza Margherita 🌿🍕 ';
                echo "<br>";
-               echo $fname;
+               echo 'Voornaam: '.$fname;
                echo "<br>";
-               echo $adres;
+               echo 'Adres: '.$adres;
                echo "<br>";
-               echo $Pcode;
+               echo 'Postcode: '.$Pcode;
                echo "<br>";
-               echo $plaats;
+               echo 'Plaats: '.$plaats;
                echo "<br>";
-               echo $Bdatum;
+               echo 'Bestel/afhaal datum: '.$Bdatum;
                echo "<br>";
                echo $newDate;
                echo "<br>";
@@ -143,15 +143,15 @@ if(isset($_POST["submit"])){
           case "Pi fung":
                echo $hoeveelheid.' stuks Pizza Fungi 🍄🍕 ';
                echo "<br>";
-               echo $fname;
+               echo 'Voornaam: '.$fname;
                echo "<br>";
-               echo $adres;
+               echo 'Adres: '.$adres;
                echo "<br>";
-               echo $Pcode;
+               echo 'Postcode: '.$Pcode;
                echo "<br>";
-               echo $plaats;
+               echo 'Plaats: '.$plaats;
                echo "<br>";
-               echo $Bdatum;
+               echo 'Bestel/afhaal datum: '.$Bdatum;
                echo "<br>";
                echo $newDate;
                echo "<br>";
@@ -166,15 +166,15 @@ if(isset($_POST["submit"])){
           case "Pi Mari":
                echo $hoeveelheid .' stuks Pizza Marina 🐟🍕 ';
                echo "<br>";
-               echo $fname;
+               echo 'Voornaam: '.$fname;
                echo "<br>";
-               echo $adres;
+               echo 'Adres: '.$adres;
                echo "<br>";
-               echo $Pcode;
+               echo 'Postcode: '.$Pcode;
                echo "<br>";
-               echo $plaats;
+               echo 'Plaats: '.$plaats;
                echo "<br>";
-               echo $Bdatum;
+               echo 'Bestel/afhaal datum: '.$Bdatum;
                echo "<br>";
                echo $newDate;
                echo "<br>";
@@ -189,15 +189,15 @@ if(isset($_POST["submit"])){
           case "Pi Hawa":
                 echo $hoeveelheid .' stuks Pizza Hawaii 🍍🍕 ';
                 echo "<br>";
-                echo $fname;
+                echo 'Voornaam: '.$fname;
                 echo "<br>";
-                echo $adres;
+                echo 'Adres: '.$adres;
                 echo "<br>";
-                echo $Pcode;
+                echo 'Postcode: '.$Pcode;
                 echo "<br>";
-                echo $plaats;
+                echo 'Plaats: '.$plaats;
                 echo "<br>";
-                echo $Bdatum;
+                echo 'Bestel/afhaal datum: '.$Bdatum;
                 echo "<br>";
                 echo $newDate;
                 echo "<br>";
@@ -212,15 +212,15 @@ if(isset($_POST["submit"])){
           case "Pi Quat":
                 echo $hoeveelheid .' stuks Pizza Quattro Formaggi 🧀🍕 ';
                 echo "<br>";
-                echo $fname;
+                echo 'Voornaam: '.$fname;
                 echo "<br>";
-                echo $adres;
+                echo 'Adres: '.$adres;
                 echo "<br>";
-                echo $Pcode;
+                echo 'Postcode: '.$Pcode;
                 echo "<br>";
-                echo $plaats;
+                echo 'Plaats: '.$plaats;
                 echo "<br>";
-                echo $Bdatum;
+                echo 'Bestel/afhaal datum: '.$Bdatum;
                 echo "<br>";
                 echo $newDate;
                 echo "<br>";
