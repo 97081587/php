@@ -77,7 +77,7 @@ if(isset($_POST["submit"])){
       <div class="Bdatum">
          <label for="Bdatum">Bestel/afhaal datum:</label>
          <br>
-         <input type="date" id="Bdatum" name="Bdatum" required>
+         <input type="date" id="Bdatum" name="Bdatum"  min="<?php echo date("Y-m-d"); ?>" required>
       </div>
    <div class="pizza">
       Pizza:
