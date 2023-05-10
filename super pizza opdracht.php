@@ -37,6 +37,104 @@ if(isset($_POST["submit"])){
  </div>
    <div class=form>
     <form method=post action="">
+        <table>
+          <tr>
+           <br>
+           <th>Soort Pizza: </th>
+           <th>Prijs: </th>
+           <th>aantal: </th>  
+          </tr>
+          <tr>
+           <td>Pizza Margherita 🌿🍕</td>
+           <td><?php $PrijsPMargherita ?>
+           <select name="hoeveelheid" required>
+           <option value='0'<?php if($hoeveelheid=='0'){ echo "selected";}?>>0</option>
+           <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
+           <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
+           <option value='3'<?php if($hoeveelheid=='3'){ echo "selected";}?>>3</option>
+           <option value='4'<?php if($hoeveelheid=='4'){ echo "selected";}?>>4</option>
+           <option value='5'<?php if($hoeveelheid=='5'){ echo "selected";}?>>5</option>
+           <option value='6'<?php if($hoeveelheid=='6'){ echo "selected";}?>>6</option>
+           <option value='7'<?php if($hoeveelheid=='7'){ echo "selected";}?>>7</option>
+           <option value='8'<?php if($hoeveelheid=='8'){ echo "selected";}?>>8</option>
+           <option value='9'<?php if($hoeveelheid=='9'){ echo "selected";}?>>9</option>
+           <option value='10'<?php if($hoeveelheid=='10'){ echo "selected";}?>>10</option>
+           <option value='∞'<?php if($hoeveelheid=='∞'){ echo "selected";}?>>∞</option>
+           </td>
+          </tr>          
+          <tr>
+           <td>Pizza Fungi 🍄🍕</td>
+           <td><?php $PrijsPFungi ?>
+           <select name="hoeveelheid" required>
+           <option value='0'<?php if($hoeveelheid=='0'){ echo "selected";}?>>0</option>
+           <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
+           <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
+           <option value='3'<?php if($hoeveelheid=='3'){ echo "selected";}?>>3</option>
+           <option value='4'<?php if($hoeveelheid=='4'){ echo "selected";}?>>4</option>
+           <option value='5'<?php if($hoeveelheid=='5'){ echo "selected";}?>>5</option>
+           <option value='6'<?php if($hoeveelheid=='6'){ echo "selected";}?>>6</option>
+           <option value='7'<?php if($hoeveelheid=='7'){ echo "selected";}?>>7</option>
+           <option value='8'<?php if($hoeveelheid=='8'){ echo "selected";}?>>8</option>
+           <option value='9'<?php if($hoeveelheid=='9'){ echo "selected";}?>>9</option>
+           <option value='10'<?php if($hoeveelheid=='10'){ echo "selected";}?>>10</option>
+           <option value='∞'<?php if($hoeveelheid=='∞'){ echo "selected";}?>>∞</option>
+           </td> 
+          </tr>
+          <tr>
+           <td>Pizza Marina 🐟🍕</td>
+           <td><?php $PrijsPMarina ?>
+           <select name="hoeveelheid" required>
+           <option value='0'<?php if($hoeveelheid=='0'){ echo "selected";}?>>0</option>
+           <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
+           <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
+           <option value='3'<?php if($hoeveelheid=='3'){ echo "selected";}?>>3</option>
+           <option value='4'<?php if($hoeveelheid=='4'){ echo "selected";}?>>4</option>
+           <option value='5'<?php if($hoeveelheid=='5'){ echo "selected";}?>>5</option>
+           <option value='6'<?php if($hoeveelheid=='6'){ echo "selected";}?>>6</option>
+           <option value='7'<?php if($hoeveelheid=='7'){ echo "selected";}?>>7</option>
+           <option value='8'<?php if($hoeveelheid=='8'){ echo "selected";}?>>8</option>
+           <option value='9'<?php if($hoeveelheid=='9'){ echo "selected";}?>>9</option>
+           <option value='10'<?php if($hoeveelheid=='10'){ echo "selected";}?>>10</option>
+           <option value='∞'<?php if($hoeveelheid=='∞'){ echo "selected";}?>>∞</option>
+           </td>
+          </tr>
+          <tr>
+           <td>Pizza Hawaii 🍍🍕</td>
+           <td><?php $PrijsPHawaii ?>
+           <select name="hoeveelheid" required>
+           <option value='0'<?php if($hoeveelheid=='0'){ echo "selected";}?>>0</option>
+           <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
+           <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
+           <option value='3'<?php if($hoeveelheid=='3'){ echo "selected";}?>>3</option>
+           <option value='4'<?php if($hoeveelheid=='4'){ echo "selected";}?>>4</option>
+           <option value='5'<?php if($hoeveelheid=='5'){ echo "selected";}?>>5</option>
+           <option value='6'<?php if($hoeveelheid=='6'){ echo "selected";}?>>6</option>
+           <option value='7'<?php if($hoeveelheid=='7'){ echo "selected";}?>>7</option>
+           <option value='8'<?php if($hoeveelheid=='8'){ echo "selected";}?>>8</option>
+           <option value='9'<?php if($hoeveelheid=='9'){ echo "selected";}?>>9</option>
+           <option value='10'<?php if($hoeveelheid=='10'){ echo "selected";}?>>10</option>
+           <option value='∞'<?php if($hoeveelheid=='∞'){ echo "selected";}?>>∞</option>
+           </td>
+          </tr>
+          <tr>
+            <td>Pizza Quattro Formaggi 🧀🍕</td>
+            <td><?php $PrijsPQFormaggi ?>
+            <select name="hoeveelheid" required>
+            <option value='0'<?php if($hoeveelheid=='0'){ echo "selected";}?>>0</option>
+            <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
+            <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
+            <option value='3'<?php if($hoeveelheid=='3'){ echo "selected";}?>>3</option>
+            <option value='4'<?php if($hoeveelheid=='4'){ echo "selected";}?>>4</option>
+            <option value='5'<?php if($hoeveelheid=='5'){ echo "selected";}?>>5</option>
+            <option value='6'<?php if($hoeveelheid=='6'){ echo "selected";}?>>6</option>
+            <option value='7'<?php if($hoeveelheid=='7'){ echo "selected";}?>>7</option>
+            <option value='8'<?php if($hoeveelheid=='8'){ echo "selected";}?>>8</option>
+            <option value='9'<?php if($hoeveelheid=='9'){ echo "selected";}?>>9</option>
+            <option value='10'<?php if($hoeveelheid=='10'){ echo "selected";}?>>10</option>
+            <option value='∞'<?php if($hoeveelheid=='∞'){ echo "selected";}?>>∞</option>
+           </td>
+          </tr>  
+        </table>
     <div class="BeOfAf">
       <label for="BeOfAf">bezorgen of afhalen?</label>
       <br>
@@ -79,30 +177,6 @@ if(isset($_POST["submit"])){
          <br>
          <input type="date" id="Bdatum" name="Bdatum"  min="<?php echo date("Y-m-d"); ?>" required>
       </div>
-   <div class="pizza">
-      Pizza:
-      <br>
-       <select name="pizza" required>
-         <option value=""<?php if($Pizza==''){ echo "selected";}?>disabled> Maak uw keuze</option>
-         <option value="Pi Marg"<?php if($Pizza=='Pi Marg'){ echo "selected";}?>>Pizza Margherita 🌿🍕</option>
-         <option value="Pi fung"<?php if($Pizza=='Pi fung'){ echo "selected";}?>>Pizza Fungi 🍄🍕</option>
-         <option value="Pi Mari"<?php if($Pizza=='Pi Mari'){ echo "selected";}?>>Pizza Marina 🐟🍕</option>
-         <option value="Pi Hawa"<?php if($Pizza=='Pi Hawa'){ echo "selected";}?>>Pizza Hawaii 🍍🍕</option>
-         <option value="Pi Quat"<?php if($Pizza=='Pi Quat'){ echo "selected";}?>>Pizza Quattro Formaggi 🧀🍕</option>
-       </select>
-       <select name="hoeveelheid" required>
-        <option value='1'<?php if($hoeveelheid=='1'){ echo "selected";}?>>1</option>
-        <option value='2'<?php if($hoeveelheid=='2'){ echo "selected";}?>>2</option>
-        <option value='3'<?php if($hoeveelheid=='3'){ echo "selected";}?>>3</option>
-        <option value='4'<?php if($hoeveelheid=='4'){ echo "selected";}?>>4</option>
-        <option value='5'<?php if($hoeveelheid=='5'){ echo "selected";}?>>5</option>
-        <option value='6'<?php if($hoeveelheid=='6'){ echo "selected";}?>>6</option>
-        <option value='7'<?php if($hoeveelheid=='7'){ echo "selected";}?>>7</option>
-        <option value='8'<?php if($hoeveelheid=='8'){ echo "selected";}?>>8</option>
-        <option value='9'<?php if($hoeveelheid=='9'){ echo "selected";}?>>9</option>
-        <option value='10'<?php if($hoeveelheid=='10'){ echo "selected";}?>>10</option>
-        <option value='∞'<?php if($hoeveelheid=='∞'){ echo "selected";}?>>∞</option>
-   </div>
       <br>
       <input type="submit" name="submit" value="gegevens versturen" />
     </form>
