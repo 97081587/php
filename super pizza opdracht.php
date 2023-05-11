@@ -13,19 +13,11 @@ $hoeveelheidQFormaggi = '';
 $bezorgKosten = 5;
 $date = $Bdatum;
 $newDate = date ('l', strtotime($date));
-if ($newDate == 'Monday') {
-    $PrijsPMargherita = 7.50;
-    $PrijsPFungi = 7.50;
-    $PrijsPMarina = 7.50;
-    $PrijsPHawaii = 7.50;
-    $PrijsPQFormaggi = 7.50;
-} else {
   $PrijsPMargherita = 12.50;
   $PrijsPFungi = 12.50;
   $PrijsPMarina = 12.50;
   $PrijsPHawaii = 11.50;
   $PrijsPQFormaggi = 14.50;
-}
 
 if(isset($_POST["submit"])){
     $fname = $_POST["fname"];
@@ -205,11 +197,25 @@ if(isset($_POST["submit"])){
 <div class=gegevens>
  <?php
  if(isset($_POST['submit'])){
+    $date = $Bdatum;
+    $newDate = date ('l', strtotime($date));
   if(!empty($_POST['BeOfAf'])) {
     $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi + $bezorgKosten;
-     } else {
+       } else {
     $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
   }
+
+  if ($newDate == 'Monday') {
+      $PrijsPMargherita = 7.50;
+      $PrijsPFungi = 7.50;
+      $PrijsPMarina = 7.50;
+      $PrijsPHawaii = 7.50;
+      $PrijsPQFormaggi = 7.50;
+    }
+  if ($newDate == 'Friday' && $totaalprijs > 20) {
+    $totaalprijs / 100 * 15;
+  }
+
   
          echo $hoeveelheidMargherita .' stuks Pizza Margherita 🌿🍕';
          echo "<br>";
