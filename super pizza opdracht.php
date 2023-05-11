@@ -196,17 +196,24 @@ if(isset($_POST["submit"])){
   $date = $Bdatum;
   $newDate = date ('l', strtotime($date));
 
- if($date == 'Monday'){
+  switch ($date) {
+    case "Monday":
+      $PrijsPMargherita = '€7,50';
+      $PrijsPFungi = '€7,50';
+      $PrijsPMarina = '€7,50';
+      $PrijsPHawaii = '€7,50';
+      $PrijsPQFormaggi = '€7,50';
+      break;
+    case "Friday":
 
- }
-
- if($date == 'Friday'){
-
- }
+      break;
+  }
 
  if('BeOfAf' == 'Bezorgen'){
-  
+
  }
+
+ $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
   
          echo $hoeveelheidMargherita .' stuks Pizza Margherita 🌿🍕';
          echo "<br>";
@@ -217,6 +224,8 @@ if(isset($_POST["submit"])){
          echo $hoeveelheidHawaii .' stuks Pizza Hawaii 🍍🍕';
          echo "<br>";
          echo $hoeveelheidQFormaggi .' stuks Pizza Quattro Formaggi 🧀🍕	';
+         echo "<br>";
+         echo $totaalprijs;
          echo "<br>";
          echo 'Voornaam: '.$_POST['fname'];
          echo "<br>";
