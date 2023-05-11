@@ -199,11 +199,10 @@ if(isset($_POST["submit"])){
  if(isset($_POST['submit'])){
     $date = $Bdatum;
     $newDate = date ('l', strtotime($date));
-  if(!empty($_POST['BeOfAf'])) {
+
     $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi + $bezorgKosten;
-       } else {
+
     $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
-  }
 
   if ($newDate == 'Monday') {
       $PrijsPMargherita = 7.50;
