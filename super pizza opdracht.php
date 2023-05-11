@@ -10,11 +10,26 @@ $hoeveelheidFungi = '';
 $hoeveelheidMarina = '';
 $hoeveelheidHawaii = '';
 $hoeveelheidQFormaggi = '';
-$PrijsPMargherita = '€12,50';
-$PrijsPFungi = '€12,50';
-$PrijsPMarina = '€13,50';
-$PrijsPHawaii = '€11,50';
-$PrijsPQFormaggi = '€14,50';
+$PrijsPMargherita = 12.50;
+$PrijsPFungi = 12.50;
+$PrijsPMarina = 12.50;
+$PrijsPHawaii = 11.50;
+$PrijsPQFormaggi = 14.50;
+$date = $Bdatum;
+$newDate = date ('l', strtotime($date));
+  switch ($newDate) {
+    case "Monday":
+      $PrijsPMargherita = 7.50;
+      $PrijsPFungi = 7.50;
+      $PrijsPMarina = 7.50;
+      $PrijsPHawaii = 7.50;
+      $PrijsPQFormaggi = 7.50;
+    break;
+  case "Friday":
+
+  break;
+}
+$bezorgKosten = 5;
 if(isset($_POST["submit"])){
     $fname = $_POST["fname"];
     $adres = $_POST["adres"];
@@ -57,7 +72,7 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
            <td>Pizza Margherita 🌿🍕</td>
-           <td><?php echo $PrijsPMargherita ?>
+           <td><?php echo "€" .$PrijsPMargherita ."0,- "?>
            <select name="hoeveelheidMargherita" required>
            <option value='0'<?php if($hoeveelheidMargherita =='0'){ echo "selected";}?>>0</option>
            <option value='1'<?php if($hoeveelheidMargherita =='1'){ echo "selected";}?>>1</option>
@@ -74,7 +89,7 @@ if(isset($_POST["submit"])){
           </tr>          
           <tr>
            <td>Pizza Fungi 🍄🍕</td>
-           <td><?php echo $PrijsPFungi ?>
+           <td><?php echo "€" .$PrijsPFungi ."0,- "?>
            <select name="hoeveelheidFungi" required>
            <option value='0'<?php if($hoeveelheidFungi =='0'){ echo "selected";}?>>0</option>
            <option value='1'<?php if($hoeveelheidFungi =='1'){ echo "selected";}?>>1</option>
@@ -91,7 +106,7 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
            <td>Pizza Marina 🐟🍕</td>
-           <td><?php echo $PrijsPMarina ?>
+           <td><?php echo "€" .$PrijsPMarina ."0,- "?>
            <select name="hoeveelheidMarina" required>
            <option value='0'<?php if($hoeveelheidMarina =='0'){ echo "selected";}?>>0</option>
            <option value='1'<?php if($hoeveelheidMarina =='1'){ echo "selected";}?>>1</option>
@@ -108,7 +123,7 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
            <td>Pizza Hawaii 🍍🍕</td>
-           <td><?php echo $PrijsPHawaii ?>
+           <td><?php echo "€" .$PrijsPHawaii ."0,- "?>
            <select name="hoeveelheidHawaii" required>
            <option value='0'<?php if($hoeveelheidHawaii =='0'){ echo "selected";}?>>0</option>
            <option value='1'<?php if($hoeveelheidHawaii =='1'){ echo "selected";}?>>1</option>
@@ -125,7 +140,7 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
             <td>Pizza Quattro Formaggi 🧀🍕</td>
-            <td><?php echo $PrijsPQFormaggi ?>
+            <td><?php echo "€" .$PrijsPQFormaggi ."0,- "?>
             <select name="hoeveelheidQFormaggi" required>
             <option value='0'<?php if($hoeveelheidQFormaggi =='0'){ echo "selected";}?>>0</option>
             <option value='1'<?php if($hoeveelheidQFormaggi =='1'){ echo "selected";}?>>1</option>
@@ -193,26 +208,9 @@ if(isset($_POST["submit"])){
 <div class=gegevens>
  <?php
  if(isset($_POST['submit'])){
-  $date = $Bdatum;
-  $newDate = date ('l', strtotime($date));
-
-  switch ($date) {
-    case "Monday":
-      $PrijsPMargherita = '€7,50';
-      $PrijsPFungi = '€7,50';
-      $PrijsPMarina = '€7,50';
-      $PrijsPHawaii = '€7,50';
-      $PrijsPQFormaggi = '€7,50';
-      break;
-    case "Friday":
-
-      break;
-  }
-
  if('BeOfAf' == 'Bezorgen'){
-
+  $DeGrotePrijs = $bezorgKosten + $totaalprijs;
  }
-
  $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
   
          echo $hoeveelheidMargherita .' stuks Pizza Margherita 🌿🍕';
@@ -225,7 +223,9 @@ if(isset($_POST["submit"])){
          echo "<br>";
          echo $hoeveelheidQFormaggi .' stuks Pizza Quattro Formaggi 🧀🍕	';
          echo "<br>";
-         echo $totaalprijs;
+         echo "€" .$totaalprijs .",-";
+         echo "<br>";
+         echo "€" .$DeGrotePrijs .",-";
          echo "<br>";
          echo 'Voornaam: '.$_POST['fname'];
          echo "<br>";
