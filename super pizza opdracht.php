@@ -26,7 +26,9 @@ $newDate = date ('l', strtotime($date));
       $PrijsPQFormaggi = 7.50;
     break;
   case "Friday":
-
+    if($totaalprijs > 20) {
+      $totaalprijs - 15%;
+    }
   break;
 }
 $bezorgKosten = 5;
@@ -209,7 +211,7 @@ if(isset($_POST["submit"])){
  <?php
  if(isset($_POST['submit'])){
  if('BeOfAf' == 'Bezorgen'){
-  $DeGrotePrijs = $bezorgKosten + $totaalprijs;
+  $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi + $bezorgKosten;
  }
  $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
   
@@ -224,8 +226,6 @@ if(isset($_POST["submit"])){
          echo $hoeveelheidQFormaggi .' stuks Pizza Quattro Formaggi 🧀🍕	';
          echo "<br>";
          echo "€" .$totaalprijs .",-";
-         echo "<br>";
-         echo "€" .$DeGrotePrijs .",-";
          echo "<br>";
          echo 'Voornaam: '.$_POST['fname'];
          echo "<br>";
