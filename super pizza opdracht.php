@@ -70,7 +70,6 @@ if(isset($_POST["submit"])){
            <option value='8'<?php if($hoeveelheidMargherita =='8'){ echo "selected";}?>>8</option>
            <option value='9'<?php if($hoeveelheidMargherita =='9'){ echo "selected";}?>>9</option>
            <option value='10'<?php if($hoeveelheidMargherita =='10'){ echo "selected";}?>>10</option>
-           <option value='∞'<?php if($hoeveelheidMargherita =='∞'){ echo "selected";}?>>∞</option>
            </td>
           </tr>          
           <tr>
@@ -88,7 +87,6 @@ if(isset($_POST["submit"])){
            <option value='8'<?php if($hoeveelheidFungi =='8'){ echo "selected";}?>>8</option>
            <option value='9'<?php if($hoeveelheidFungi =='9'){ echo "selected";}?>>9</option>
            <option value='10'<?php if($hoeveelheidFungi =='10'){ echo "selected";}?>>10</option>
-           <option value='∞'<?php if($hoeveelheidFungi =='∞'){ echo "selected";}?>>∞</option>
            </td> 
           </tr>
           <tr>
@@ -106,7 +104,6 @@ if(isset($_POST["submit"])){
            <option value='8'<?php if($hoeveelheidMarina =='8'){ echo "selected";}?>>8</option>
            <option value='9'<?php if($hoeveelheidMarina =='9'){ echo "selected";}?>>9</option>
            <option value='10'<?php if($hoeveelheidMarina =='10'){ echo "selected";}?>>10</option>
-           <option value='∞'<?php if($hoeveelheidMarina =='∞'){ echo "selected";}?>>∞</option>
            </td>
           </tr>
           <tr>
@@ -124,7 +121,6 @@ if(isset($_POST["submit"])){
            <option value='8'<?php if($hoeveelheidHawaii =='8'){ echo "selected";}?>>8</option>
            <option value='9'<?php if($hoeveelheidHawaii =='9'){ echo "selected";}?>>9</option>
            <option value='10'<?php if($hoeveelheidHawaii =='10'){ echo "selected";}?>>10</option>
-           <option value='∞'<?php if($hoeveelheidHawaii =='∞'){ echo "selected";}?>>∞</option>
            </td>
           </tr>
           <tr>
@@ -142,7 +138,6 @@ if(isset($_POST["submit"])){
             <option value='8'<?php if($hoeveelheidQFormaggi =='8'){ echo "selected";}?>>8</option>
             <option value='9'<?php if($hoeveelheidQFormaggi =='9'){ echo "selected";}?>>9</option>
             <option value='10'<?php if($hoeveelheidQFormaggi =='10'){ echo "selected";}?>>10</option>
-            <option value='∞'<?php if($hoeveelheidQFormaggi =='∞'){ echo "selected";}?>>∞</option>
            </td>
           </tr>  
         </table>
@@ -200,6 +195,18 @@ if(isset($_POST["submit"])){
  if(isset($_POST['submit'])){
   $date = $Bdatum;
   $newDate = date ('l', strtotime($date));
+
+ if($date == 'Monday'){
+
+ }
+
+ if($date == 'Friday'){
+
+ }
+
+ if('BeOfAf' == 'Bezorgen'){
+  
+ }
   
          echo $hoeveelheidMargherita .' stuks Pizza Margherita 🌿🍕';
          echo "<br>";
