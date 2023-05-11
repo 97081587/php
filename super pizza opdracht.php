@@ -10,28 +10,23 @@ $hoeveelheidFungi = '';
 $hoeveelheidMarina = '';
 $hoeveelheidHawaii = '';
 $hoeveelheidQFormaggi = '';
-$PrijsPMargherita = 12.50;
-$PrijsPFungi = 12.50;
-$PrijsPMarina = 12.50;
-$PrijsPHawaii = 11.50;
-$PrijsPQFormaggi = 14.50;
+$bezorgKosten = 5;
 $date = $Bdatum;
 $newDate = date ('l', strtotime($date));
-  switch ($newDate) {
-    case "Monday":
-      $PrijsPMargherita = 7.50;
-      $PrijsPFungi = 7.50;
-      $PrijsPMarina = 7.50;
-      $PrijsPHawaii = 7.50;
-      $PrijsPQFormaggi = 7.50;
-    break;
-  case "Friday":
-    if($totaalprijs > 20) {
-      $totaalprijs - 15%;
-    }
-  break;
+if ($newDate == 'Monday') {
+    $PrijsPMargherita = 7.50;
+    $PrijsPFungi = 7.50;
+    $PrijsPMarina = 7.50;
+    $PrijsPHawaii = 7.50;
+    $PrijsPQFormaggi = 7.50;
+} else {
+  $PrijsPMargherita = 12.50;
+  $PrijsPFungi = 12.50;
+  $PrijsPMarina = 12.50;
+  $PrijsPHawaii = 11.50;
+  $PrijsPQFormaggi = 14.50;
 }
-$bezorgKosten = 5;
+
 if(isset($_POST["submit"])){
     $fname = $_POST["fname"];
     $adres = $_POST["adres"];
@@ -210,10 +205,11 @@ if(isset($_POST["submit"])){
 <div class=gegevens>
  <?php
  if(isset($_POST['submit'])){
- if('BeOfAf' == 'Bezorgen'){
-  $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi + $bezorgKosten;
- }
- $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
+  if(!empty($_POST['BeOfAf'])) {
+    $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi + $bezorgKosten;
+     } else {
+    $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
+  }
   
          echo $hoeveelheidMargherita .' stuks Pizza Margherita 🌿🍕';
          echo "<br>";
@@ -239,14 +235,12 @@ if(isset($_POST["submit"])){
          echo "<br>";
          echo $newDate;
          echo "<br>";
-         if(isset($_POST['submit'])){
           if(!empty($_POST['BeOfAf'])) {
            echo '  ' . $_POST['BeOfAf'];
             } else {
            echo 'Geen keuze gemaakt';
          }
        }
-     }
  ?>
 </div>
 </html>
