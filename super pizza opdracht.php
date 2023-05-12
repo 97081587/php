@@ -39,7 +39,7 @@ if(isset($_POST["submit"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home of the world's most delicious pizza 🍕🍕🍕</title>
+    <title>Pizza di mama's official website 🍕🍕🍕</title>
     <link rel="icon" href="pizza.png">
     <link href="pizza.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
