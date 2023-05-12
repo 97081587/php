@@ -205,16 +205,17 @@ if(isset($_POST["submit"])){
       $PrijsPHawaii = 7.50;
       $PrijsPQFormaggi = 7.50;
     }
-  if ($newDate == 'Friday' && $totaalprijs >20) {
-    $totaalprijs / 100 * 15;
-  }  
-
+  
   if ($BeOfAf == 'Bezorgen') {
     $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi + $bezorgKosten;
   }
   if ($BeOfAf == 'Afhalen') {
     $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
   }
+
+  if ($newDate == 'Friday' && $totaalprijs > 20) {
+    $totaalprijs = $totaalprijs - 15 * ($totaalprijs / 100);
+  } 
   
         echo $hoeveelheidMargherita .' stuks Pizza Margherita 🌿🍕';
         echo "<br>";
