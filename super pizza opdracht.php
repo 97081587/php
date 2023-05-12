@@ -49,6 +49,7 @@ if(isset($_POST["submit"])){
  <div class=top>
    <h1>👩‍🍳 pizza di mama. 🍕</h1>
    <h2 class=est>Est. 2022</h2>
+   <hr>
  </div>
    <div class=form>
     <form method=post action="">
