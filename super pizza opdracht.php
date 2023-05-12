@@ -149,9 +149,9 @@ if(isset($_POST["submit"])){
       <label for="BeOfAf">bezorgen of afhalen?</label>
       <br>
       <label>bezorgen</label>
-      <input type="radio" name="BeOfAf" value="Bezorgen">
+      <input type="radio" name="BeOfAf" value="Bezorgen" required>
       <label>afhalen</label>
-      <input type="radio" name="BeOfAf" value="Afhalen">
+      <input type="radio" name="BeOfAf" value="Afhalen" required>
       <br>
     </div>
       <div class="fname">
@@ -216,36 +216,32 @@ if(isset($_POST["submit"])){
   }
 
   
-         echo $hoeveelheidMargherita .' stuks Pizza Margherita 🌿🍕';
-         echo "<br>";
-         echo $hoeveelheidFungi .' stuks Pizza Fungi 🍄🍕';
-         echo "<br>";
-         echo $hoeveelheidMarina .' stuks Pizza Marina 🐟🍕';
-         echo "<br>";
-         echo $hoeveelheidHawaii .' stuks Pizza Hawaii 🍍🍕';
-         echo "<br>";
-         echo $hoeveelheidQFormaggi .' stuks Pizza Quattro Formaggi 🧀🍕	';
-         echo "<br>";
-         echo "€" .$totaalprijs .",-";
-         echo "<br>";
-         echo 'Voornaam: '.$_POST['fname'];
-         echo "<br>";
-         echo 'Adres: '.$_POST['adres'];
-         echo "<br>";
-         echo 'Postcode: '.$_POST['pcode'];
-         echo "<br>";
-         echo 'Plaats: '.$_POST['plaats'];
-         echo "<br>";
-         echo 'Bestel/afhaal datum: '.$_POST['Bdatum'];
-         echo "<br>";
-         echo $newDate;
-         echo "<br>";
-          if(!empty($_POST['BeOfAf'])) {
-           echo '  ' . $_POST['BeOfAf'];
-            } else {
-           echo 'Geen keuze gemaakt';
-         }
-       }
+        echo $hoeveelheidMargherita .' stuks Pizza Margherita 🌿🍕';
+        echo "<br>";
+        echo $hoeveelheidFungi .' stuks Pizza Fungi 🍄🍕';
+        echo "<br>";
+        echo $hoeveelheidMarina .' stuks Pizza Marina 🐟🍕';
+        echo "<br>";
+        echo $hoeveelheidHawaii .' stuks Pizza Hawaii 🍍🍕';
+        echo "<br>";
+        echo $hoeveelheidQFormaggi .' stuks Pizza Quattro Formaggi 🧀🍕	';
+        echo "<br>";
+        echo "€" .$totaalprijs .",-";
+        echo "<br>";
+        echo 'Voornaam: '.$_POST['fname'];
+        echo "<br>";
+        echo 'Adres: '.$_POST['adres'];
+        echo "<br>";
+        echo 'Postcode: '.$_POST['pcode'];
+        echo "<br>";
+        echo 'Plaats: '.$_POST['plaats'];
+        echo "<br>";
+        echo 'Bestel/afhaal datum: '.$_POST['Bdatum'];
+        echo "<br>";
+        echo $newDate;
+        echo "<br>";
+       echo $_POST['BeOfAf'];
+      }
  ?>
 </div>
 </html>
