@@ -11,8 +11,7 @@ $hoeveelheidMarina = '';
 $hoeveelheidHawaii = '';
 $hoeveelheidQFormaggi = '';
 $bezorgKosten = 5;
-$date = $Bdatum;
-$newDate = date ('l', strtotime($date));
+$newDate = date ('l', strtotime($Bdatum));
   $PrijsPMargherita = 12.50;
   $PrijsPFungi = 12.50;
   $PrijsPMarina = 12.50;
@@ -197,8 +196,7 @@ if(isset($_POST["submit"])){
 <div class=gegevens>
  <?php
  if(isset($_POST['submit'])){
-    $date = $Bdatum;
-    $newDate = date ('l', strtotime($date));
+    $newDate = date ('l', strtotime($Bdatum));
 
   if ($newDate == 'Monday') {
       $PrijsPMargherita = 7.50;
