@@ -205,6 +205,9 @@ if(isset($_POST["submit"])){
       $PrijsPHawaii = 7.50;
       $PrijsPQFormaggi = 7.50;
     }
+  if ($newDate == 'Friday' && $totaalprijs >20) {
+    $totaalprijs / 100 * 15;
+  }  
 
   if ($BeOfAf == 'Bezorgen') {
     $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi + $bezorgKosten;
