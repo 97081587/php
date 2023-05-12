@@ -204,45 +204,43 @@ if(isset($_POST["submit"])){
       $PrijsPMarina = 7.50;
       $PrijsPHawaii = 7.50;
       $PrijsPQFormaggi = 7.50;
-    }
-  
+  }  
   if ($BeOfAf == 'Bezorgen') {
     $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi + $bezorgKosten;
   }
   if ($BeOfAf == 'Afhalen') {
     $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
   }
-
   if ($newDate == 'Friday' && $totaalprijs > 20) {
     $totaalprijs = $totaalprijs - 15 * ($totaalprijs / 100);
   } 
   
-        echo $hoeveelheidMargherita .' stuks Pizza Margherita 🌿🍕';
-        echo "<br>";
-        echo $hoeveelheidFungi .' stuks Pizza Fungi 🍄🍕';
-        echo "<br>";
-        echo $hoeveelheidMarina .' stuks Pizza Marina 🐟🍕';
-        echo "<br>";
-        echo $hoeveelheidHawaii .' stuks Pizza Hawaii 🍍🍕';
-        echo "<br>";
-        echo $hoeveelheidQFormaggi .' stuks Pizza Quattro Formaggi 🧀🍕	';
-        echo "<br>";
-        echo "€" .$totaalprijs .",-";
-        echo "<br>";
-        echo 'Voornaam: '.$_POST['fname'];
-        echo "<br>";
-        echo 'Adres: '.$_POST['adres'];
-        echo "<br>";
-        echo 'Postcode: '.$_POST['pcode'];
-        echo "<br>";
-        echo 'Plaats: '.$_POST['plaats'];
-        echo "<br>";
-        echo 'Bestel/afhaal datum: '.$_POST['Bdatum'];
-        echo "<br>";
-        echo $newDate;
-        echo "<br>";
-       echo $_POST['BeOfAf'];
-      }
+      echo $hoeveelheidMargherita .' stuks Pizza Margherita 🌿🍕';
+      echo "<br>";
+      echo $hoeveelheidFungi .' stuks Pizza Fungi 🍄🍕';
+      echo "<br>";
+      echo $hoeveelheidMarina .' stuks Pizza Marina 🐟🍕';
+      echo "<br>";
+      echo $hoeveelheidHawaii .' stuks Pizza Hawaii 🍍🍕';
+      echo "<br>";
+      echo $hoeveelheidQFormaggi .' stuks Pizza Quattro Formaggi 🧀🍕	';
+      echo "<br>";
+      echo "€" .$totaalprijs .",-";
+      echo "<br>";
+      echo 'Voornaam: '.$_POST['fname'];
+      echo "<br>";
+      echo 'Adres: '.$_POST['adres'];
+      echo "<br>";
+      echo 'Postcode: '.$_POST['pcode'];
+      echo "<br>";
+      echo 'Plaats: '.$_POST['plaats'];
+      echo "<br>";
+      echo 'Bestel/afhaal datum: '.$_POST['Bdatum'];
+      echo "<br>";
+      echo $newDate;
+      echo "<br>";
+     echo $_POST['BeOfAf'];
+    }
  ?>
 </div>
 </html>
