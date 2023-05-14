@@ -1,8 +1,35 @@
 * {
+    box-sizing: border-box;
     background-color: #FFEECC;
+    color: black;
     font-family: 'EB Garamond', serif;
 }
 
 .est {
     font-size: 17px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float:left;
+}
+
+li a {
+    display: block;
+    border-radius: 200px;
+    padding: 8px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
