@@ -22,17 +22,13 @@ li {
     float:left;
 }
 
-a {
-    background-color: gray;
-}
-
 li a {
     display: block;
+    border-radius: 200px;
     padding: 8px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #fae0ab;
-    color: rgb(255, 0, 0);
+    background-color: rgb(245, 197, 54);
 }

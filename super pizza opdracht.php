@@ -57,7 +57,7 @@ if(isset($_POST["submit"])){
        <li><a href="#over">Over pizza di mama</a></li>
        <li><a href="#winkels">Winkels</a></li>
        <li><a href="#werken">Werken bij</a></li>
-       <li style="float:right"><a class="active" href='#login'>Login</a></li>
+       <li><a href='#login'>Login</a></li>
       </ul>
      </nav>
    </div>
