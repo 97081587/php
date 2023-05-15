@@ -49,6 +49,7 @@ if(isset($_POST["submit"])){
  <div class=top>
    <h1>👩‍🍳 pizza di mama. 🍕</h1>
    <h2 class=est>Est. 2022</h2>
+   <div>
    <nav>
      <ul>
        <li><a href="#aanbiedingen">Aanbiedingen</a></li>
@@ -56,9 +57,10 @@ if(isset($_POST["submit"])){
        <li><a href="#over">Over pizza di mama</a></li>
        <li><a href="#winkels">Winkels</a></li>
        <li><a href="#werken">Werken bij</a></li>
-       <li style="float:right"><a class="active" href=''>Login</a></li>
+       <li style="float:right"><a class="active" href='#login'>Login</a></li>
       </ul>
      </nav>
+   </div>
  </div>
    <div class=form>
     <form method=post action="">
