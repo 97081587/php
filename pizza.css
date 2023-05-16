@@ -50,7 +50,10 @@ table {
     justify-content: center;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
+.banner{
+    padding: 10px;
+    text-align: center;
+    background: white;
+    font-size: 15px;
+    
 }
