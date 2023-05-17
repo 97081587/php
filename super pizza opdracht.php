@@ -47,9 +47,10 @@ if(isset($_POST["submit"])){
 
 <body>
  <div class=top>
-  <p class=banner> Op maandag is het pizza actie dag met pizza's voor €7,50! Vrijdag is het pizza start weekend dag met 15% korting bij bestellingen boven de €20! €5 Bezorgenkosten!<p>
+  <p class=banner> Op maandag is het pizza actie dag met alle pizza's voor €7,50! Op vrijdag is het pizza start weekend dag met 15% korting bij bestellingen boven de €20! €5 aan bezorgkosten!<p>
    <h1>👩‍🍳 pizza di mama. 🍕</h1>
    <h2 class=est>Est. 2022 "la migliore pizza fatta in casa."</h2> 
+   <br>
    <div>
    <nav>
      <ul>
