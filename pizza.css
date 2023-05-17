@@ -37,6 +37,7 @@ li a:hover {
 
 table {
     border-spacing: 4px;
+    background-color: rgb(195, 195, 195);
   }
 
 .form {

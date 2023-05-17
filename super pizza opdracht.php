@@ -76,7 +76,8 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
            <td>Pizza Margherita 🌿🍕</td>
-           <td><?php echo "€" .$PrijsPMargherita ."0,- "?>
+           <td><?php echo "€" .$PrijsPMargherita ."0,- "?><td>
+            <td>
             <select name="hoeveelheidMargherita" required>
             <option value='0'<?php if($hoeveelheidMargherita =='0'){ echo "selected";}?>>0</option>
             <option value='1'<?php if($hoeveelheidMargherita =='1'){ echo "selected";}?>>1</option>
