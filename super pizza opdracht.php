@@ -76,7 +76,7 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
            <td>Pizza Margherita 🌿🍕</td>
-           <td><?php echo "€" .$PrijsPMargherita ."0,- "?><td>
+           <td><?php echo "€" .$PrijsPMargherita ."0,- "?></td>
             <td>
             <select name="hoeveelheidMargherita" required>
             <option value='0'<?php if($hoeveelheidMargherita =='0'){ echo "selected";}?>>0</option>
@@ -94,7 +94,8 @@ if(isset($_POST["submit"])){
           </tr>          
           <tr>
            <td>Pizza Fungi 🍄🍕</td>
-           <td><?php echo "€" .$PrijsPFungi ."0,- "?>
+           <td><?php echo "€" .$PrijsPFungi ."0,- "?></td>
+           <td>
             <select name="hoeveelheidFungi" required>
             <option value='0'<?php if($hoeveelheidFungi =='0'){ echo "selected";}?>>0</option>
             <option value='1'<?php if($hoeveelheidFungi =='1'){ echo "selected";}?>>1</option>
@@ -111,7 +112,8 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
            <td>Pizza Marina 🐟🍕</td>
-           <td><?php echo "€" .$PrijsPMarina ."0,- "?>
+           <td><?php echo "€" .$PrijsPMarina ."0,- "?></td>
+           <td>
             <select name="hoeveelheidMarina" required>
             <option value='0'<?php if($hoeveelheidMarina =='0'){ echo "selected";}?>>0</option>
             <option value='1'<?php if($hoeveelheidMarina =='1'){ echo "selected";}?>>1</option>
@@ -128,7 +130,8 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
            <td>Pizza Hawaii 🍍🍕</td>
-           <td><?php echo "€" .$PrijsPHawaii ."0,- "?>
+           <td><?php echo "€" .$PrijsPHawaii ."0,- "?></td>
+           <td>
             <select name="hoeveelheidHawaii" required>
             <option value='0'<?php if($hoeveelheidHawaii =='0'){ echo "selected";}?>>0</option>
             <option value='1'<?php if($hoeveelheidHawaii =='1'){ echo "selected";}?>>1</option>
@@ -145,7 +148,8 @@ if(isset($_POST["submit"])){
           </tr>
           <tr>
             <td>Pizza Quattro Formaggi 🧀🍕</td>
-            <td><?php echo "€" .$PrijsPQFormaggi ."0,- "?>
+            <td><?php echo "€" .$PrijsPQFormaggi ."0,- "?></td>
+            <td>
               <select name="hoeveelheidQFormaggi" required>
               <option value='0'<?php if($hoeveelheidQFormaggi =='0'){ echo "selected";}?>>0</option>
               <option value='1'<?php if($hoeveelheidQFormaggi =='1'){ echo "selected";}?>>1</option>
