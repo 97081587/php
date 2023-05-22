@@ -16,17 +16,17 @@ if(isset($_POST["submit"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎺🐈</title>
+    <title>📁</title>
 </head>
 
     <form>
         <div class="bedrag">
             <label for="bedrag">Ingelegd bedrag:</label>
-            <input type="number" id="bedrag" name="bedrag" value="" required>
+            <input type="number" id="bedrag" name="bedrag" value="" required min="0">
         </div>
             <div class="percentage">
                 <label for="percentage">Rentepercentage:</label>
-                <input type="number" id="percentage" name="percentage" value="" required>
+                <input type="number" id="percentage" name="percentage" value="" required min="0">
             </div>
                 <br>
             <div class=radio>  
@@ -39,7 +39,6 @@ if(isset($_POST["submit"])){
             <br>
         <input type="submit" name="submit" value="Bereken"/>
     </form>
-</html>
 
 <?php
     if ($eindbdrg == '10jaar') {
@@ -52,3 +51,4 @@ if(isset($_POST["submit"])){
         echo $nwbedrag;
     }   
 ?>
+</html>
