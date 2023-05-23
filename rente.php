@@ -41,14 +41,16 @@ if(isset($_POST["submit"])){
     </form>
 
 <?php
-    if ($eindbdrg == '10jaar') {
-        $nwbedrag = $bedrag * (1 + $percentage / 100);
-        echo $nwbedrag;
-    }
+    if(isset($_POST['submit'])){
+        if ($eindbdrg == '10jaar') {
+            $nwbedrag = $bedrag * (1 + $percentage / 100);
+            echo $nwbedrag;
+      }
 
-    if ($eindbdrg == 'verdubbeld') {
-        $nwbedrag = $bedrag * 2;
-        echo $nwbedrag;
-    }   
+        if ($eindbdrg == 'verdubbeld') {
+            $nwbedrag = $bedrag * 2;
+            echo $nwbedrag;
+        } 
+    }  
 ?>
 </html>
