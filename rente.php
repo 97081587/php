@@ -1,12 +1,12 @@
 <?php 
 $bedrag = '';
 $percentage = '';
-$eindbdrg = '';
+$JaOfVer = '';
 
 if(isset($_POST["submit"])){
     $bedrag = $_POST["bedrag"];
     $percentage = $_POST["percentage"];
-    $eindbdrg = $_POST["eindbdrg"];
+    $JaOfVer = $_POST["JaOfVer"];
 }
 ?>
 
@@ -30,29 +30,34 @@ if(isset($_POST["submit"])){
             </div>
                 <br>
             <div class=radio>  
-                <input type="radio" name="eindbdrg" value="10jaar" required>
+                <input type="radio" name="JaOfVer" value="10jaar" required>
                 <label>Eindbedrag na 10 jaar</label>
                 <br>
-                <input type="radio" name="eindbdrg" value="verdubbeld" required>
+                <input type="radio" name="JaOfVer" value="verdubbeld" required>
                 <label>Eindbedrag verdubbeld</label>
             </div>
             <br>
         <input type="submit" name="submit" value="Bereken"/>
     </form>
 
-<?php
+<div class="berekening">
+ <?php
     if(isset($_POST['submit'])){
-        if ($eindbdrg == '10jaar') {
+        if ($JaOfVer == '10jaar') {
             $nwbedrag = $bedrag * (1 + $percentage / 100);
-            echo $nwbedrag;
-            echo "he";
+            $eindbedrg1 = $nwbedrag * 10;
+            echo $eindbedrg1;
+            echo "test1";
         }
-        if ($eindbdrg == 'verdubbeld') {
-            $nwbedrag = $bedrag * 2;
-            echo $nwbedrag;
-            echo "he2";
+
+        if ($JaOfVer == 'verdubbeld') {
+            $nwbedrag = $bedrag * (1 + $percentage / 100);
+            $eindbedrg2 = $nwbedrag * 2;
+            echo $eindbedrg2;
+            echo "test2";
         } 
-        echo "he3";
+        echo "test3";
     }  
-?>
+ ?>
+</div>
 </html>
