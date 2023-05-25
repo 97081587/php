@@ -45,12 +45,14 @@ if(isset($_POST["submit"])){
         if ($eindbdrg == '10jaar') {
             $nwbedrag = $bedrag * (1 + $percentage / 100);
             echo $nwbedrag;
-      }
-
+            echo "he";
+        }
         if ($eindbdrg == 'verdubbeld') {
             $nwbedrag = $bedrag * 2;
             echo $nwbedrag;
+            echo "he2";
         } 
+        echo "he3";
     }  
 ?>
 </html>
