@@ -2,6 +2,7 @@
 $bedrag = '';
 $percentage = '';
 $JaOfVer = '';
+$jaar = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
 if(isset($_POST["submit"])){
     $bedrag = $_POST["bedrag"];
@@ -19,7 +20,7 @@ if(isset($_POST["submit"])){
     <title>📁</title>
 </head>
 
-    <form>
+    <form method=post>
         <div class="bedrag">
             <label for="bedrag">Ingelegd bedrag:</label>
             <input type="number" id="bedrag" name="bedrag" value="" required min="0">
@@ -44,20 +45,30 @@ if(isset($_POST["submit"])){
  <?php
     if(isset($_POST['submit'])){
         if ($JaOfVer == '10jaar') {
-            $nwbedrag = $bedrag * (1 + $percentage / 100);
-            $eindbedrg1 = $nwbedrag * 10;
-            echo $eindbedrg1;
-            echo "test1";
+            echo "<h1>Berekening</h1><br>";
+            echo "Het ingelegde bedrag is: " .$bedrag ."<br>";
+            echo "Het rentepercentage is: " .$percentage ."%";
+            echo "<br>";
+            echo "<br>Het eindbedrag na 10 jaar<br>";
+            echo "<br>";
+            foreach ($jaar as $tijd) {      
+                $nwbedrag = $bedrag * (1 + $percentage * $tijd / 100);
+                echo "$tijd $nwbedrag <br>";
+            }
         }
 
         if ($JaOfVer == 'verdubbeld') {
-            $nwbedrag = $bedrag * (1 + $percentage / 100);
-            $eindbedrg2 = $nwbedrag * 2;
-            echo $eindbedrg2;
-            echo "test2";
+            echo "<h1>Berekening</h1><br>";
+            echo "Het ingelegde bedrag is: " .$bedrag ."<br>";
+            echo "Het rentepercentage is: " .$percentage ."%";
+            echo "<br>";
+            echo "<br>Het eindbedrag verdubbeld<br>";
+            echo "<br>";
+            while ($bedrag <= 2) {
+
+                }
+            }
         } 
-        echo "test3";
-    }  
  ?>
 </div>
 </html>
