@@ -2,7 +2,6 @@
 $bedrag = '';
 $percentage = '';
 $JaOfVer = '';
-$jaar = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 
 if(isset($_POST["submit"])){
     $bedrag = $_POST["bedrag"];
@@ -44,6 +43,7 @@ if(isset($_POST["submit"])){
 <div class="berekening">
  <?php
     if(isset($_POST['submit'])){
+        echo "<hr>";
         if ($JaOfVer == '10jaar') {
             echo "<h1>Berekening</h1><br>";
             echo "Het ingelegde bedrag is: " .$bedrag ."<br>";
@@ -51,10 +51,13 @@ if(isset($_POST["submit"])){
             echo "<br>";
             echo "<br>Het eindbedrag na 10 jaar<br>";
             echo "<br>";
-            foreach ($jaar as $tijd) {      
-                $nwbedrag = $bedrag * (1 + $percentage * $tijd / 100);
-                echo "$tijd $nwbedrag <br>";
+            echo "<table border=1>";
+            echo "<th>Jaar</th><th>Bedrag</th>";
+            for ($i=1;$i<=10;$i++) {      
+                $bedrag += ($percentage / 100) * $bedrag;
+                echo "<tr><td>$i</td><td>" .round($bedrag,2) ."</td></tr>";
             }
+            echo "</table>";
         }
 
         if ($JaOfVer == 'verdubbeld') {
@@ -64,11 +67,15 @@ if(isset($_POST["submit"])){
             echo "<br>";
             echo "<br>Het eindbedrag verdubbeld<br>";
             echo "<br>";
-            while ($bedrag <= 2) {
+            echo "<table border=1";
+            echo "<th>Jaar</th><th>Bedrag</th>";
+            while ($bedrag <= $bedrag * 2) {
 
-                }
+                echo "<tr><td></td><td>" .round($bedrag,2) ."</td></tr>";
             }
-        } 
+            echo "</table>";
+        }
+    } 
  ?>
 </div>
 </html>
