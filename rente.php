@@ -2,7 +2,6 @@
 $bedrag = '';
 $percentage = '';
 $JaOfVer = '';
-
 if(isset($_POST["submit"])){
     $bedrag = $_POST["bedrag"];
     $percentage = $_POST["percentage"];
@@ -67,10 +66,10 @@ if(isset($_POST["submit"])){
             echo "<br>";
             echo "<br>Het eindbedrag verdubbeld<br>";
             echo "<br>";
-            echo "<table border=1";
+            echo "<table border=1>";
             echo "<th>Jaar</th><th>Bedrag</th>";
             while ($bedrag <= $bedrag * 2) {
-
+                $bedrag += ($percentage / 100) * $bedrag;
                 echo "<tr><td></td><td>" .round($bedrag,2) ."</td></tr>";
             }
             echo "</table>";
