@@ -71,6 +71,7 @@ if(isset($_POST["submit"])){
             while ($bedrag <= $bedrag * 2) {
                 $bedrag += ($percentage / 100) * $bedrag;
                 echo "<tr><td></td><td>" .round($bedrag,2) ."</td></tr>";
+                $bedrag++;
             }
             echo "</table>";
         }
