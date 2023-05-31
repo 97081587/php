@@ -224,13 +224,11 @@ if(isset($_POST["submit"])){
           $PrijsPMarina = 7.50;
           $PrijsPHawaii = 7.50;
           $PrijsPQFormaggi = 7.50;
-      }  
+      }                
+      $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
         if ($BeOfAf == 'Bezorgen') {
-            $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi + $bezorgKosten;
+            $totaalprijs = $totaalprijs + $bezorgKosten;
         }
-          if ($BeOfAf == 'Afhalen') {
-              $totaalprijs = $PrijsPMargherita * $hoeveelheidMargherita +  $PrijsPFungi * $hoeveelheidFungi + $PrijsPMarina * $hoeveelheidMarina + $PrijsPHawaii * $hoeveelheidHawaii + $PrijsPQFormaggi * $hoeveelheidQFormaggi;
-           }
         if ($newDate == 'Friday' && $totaalprijs > 20) {
               $totaalprijs = $totaalprijs - 15 * ($totaalprijs / 100);
         } 
