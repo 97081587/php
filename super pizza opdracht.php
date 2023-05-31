@@ -246,7 +246,7 @@ if(isset($_POST["submit"])){
       echo "<br>";
       echo $hoeveelheidQFormaggi .' stuks Pizza Quattro Formaggi 🧀🍕	';
       echo "<br>";
-      echo "€" .$totaalprijs .",-";
+      echo "€" .round($totaalprijs,2) .",-";
       echo "<br>";
       echo 'Voornaam: '.$_POST['fname'];
       echo "<br>";

@@ -68,10 +68,12 @@ if(isset($_POST["submit"])){
             echo "<br>";
             echo "<table border=1>";
             echo "<th>Jaar</th><th>Bedrag</th>";
-            while ($bedrag <= $bedrag * 2) {
+            $dubbelbedrag = $bedrag * 2;
+            $teller =1;
+            while ($bedrag <= $dubbelbedrag) {
                 $bedrag += ($percentage / 100) * $bedrag;
-                echo "<tr><td></td><td>" .round($bedrag,2) ."</td></tr>";
-                $bedrag++;
+                echo "<tr><td>$teller</td><td>" .round($bedrag,2) ."</td></tr>";
+                $teller++;
             }
             echo "</table>";
         }
