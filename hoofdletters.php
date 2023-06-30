@@ -1,5 +1,5 @@
 <?php
-$zin ='';
+$zin = readline('voer een zin in: ');
 
 echo strtoupper("$zin \n");
 echo strtolower("$zin \n");
