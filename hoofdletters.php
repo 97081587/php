@@ -1,9 +1,8 @@
 <?php
 $zin ='';
 
-echo "$zin";
-echo srtrtoupper("$zin");
-echo strtolower("$zin");
-echo ucwords("$zin");
-echo ucfirst("$zin");
+echo strtoupper("$zin \n");
+echo strtolower("$zin \n");
+echo ucwords("$zin \n");
+echo ucfirst("$zin \n");
 ?>
