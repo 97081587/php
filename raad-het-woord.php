@@ -9,6 +9,6 @@ if (stripos($rndmwoord, $letter) ==false) {
       echo "letter $letter komt niet voor in het woord.";
     } else {
         echo "Het woord is: $letter ";
-    }
-}   
+        }
+    }   
 ?>
