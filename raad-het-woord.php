@@ -1,14 +1,18 @@
 <?php
-$letter = '';
-$rndmwoord = array("peel","bmw");
+$letter = readline('');
+$rij = array("peer","appel", "banaan");
+$rndmwoord =array_rand($rij);
 
-while (stripos($rndmwoord, $lword)) {
+$teller=1;
+
+
     echo 'Het woord is: ';
     $letter = readline('Kies een letter: \n');
-if (stripos($rndmwoord, $letter) ==false) {
-      echo "letter $letter komt niet voor in het woord.";
-    } else {
-        echo "Het woord is: $letter ";
-        }
-    }   
+        if (stripos($rndmwoord, $letter) ==false) {
+            echo "letter $letter komt niet voor in het woord.";
+        } else {
+             $teller++;
+            echo "Het woord is: $rndmwoord, je hebt het graden in $teller pogingen.";
+        } 
+ 
 ?>
