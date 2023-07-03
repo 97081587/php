@@ -5,7 +5,7 @@ $rndmwoord =array_rand($rij, 2);
 
 $teller=1;
 
-while ($letter !== $rij) {
+while ($letter !== $rndmwoord) {
     echo "Het woord is: \n";
     $letter = readline("Kies een letter: \n");
         if (stripos($rij[$rndmwoord[1]], $letter) ==false) {
