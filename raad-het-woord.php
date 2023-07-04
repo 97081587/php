@@ -1,21 +1,22 @@
 <?php
 $letter ='';
 $rij = array("peer", "appel", "banaan");
-$rndmwoord =array_rand($rij, 2);
+$rndmwoord =array_rand($rij, 3);
 
 $teller=1;
 
 echo "Het woord is: \n";
-while ($letter !== $rndmwoord) {   
+while ($letter !== $rij[$rndmwoord[0]]) {   
     $letter = readline("Kies een letter: \n");
-     if (stripos($rij[$rndmwoord[1]], $letter) ==false) {
-            echo "letter $letter komt niet voor in het woord.\n";
+     if (stripos($rij[$rndmwoord[0]], $letter) ==false) {
+            echo "Het woord is: \n";
         } else {
-         echo "Het woord is: \n";
+          echo "letter $letter komt niet voor in het woord.\n";
         }
     $teller++;
 }
-    echo "Het woord is: ";
-    echo $rij[$rndmwoord[2]];
-    echo "je hebt het geraden in $teller pogingen.";
+echo "Het woord is:" .$rij[$rndmword[0]],", je hebt het geraden in $teller pogingen.\n";
+echo "Wil je nog een keer spelen (j/n)";
+if ($letter == "n"){  exit();
+}
 ?>
