@@ -1,6 +1,6 @@
 <?php
 $letter ='';
-$rij = array("peer", "appel", "banaan");
+$rij = array("appel", "banaan", "tos");
 $rndmwoord =array_rand($rij, 3);
 
 $teller=1;
@@ -15,7 +15,7 @@ while ($letter !== $rij[$rndmwoord[0]]) {
         }
     $teller++;
 }
-echo "Het woord is:" .$rij[$rndmword[0]],", je hebt het geraden in $teller pogingen.\n";
+echo "Het woord is:" .$rij[$rndmwoord[0]],", je hebt het geraden in $teller pogingen.\n";
 echo "Wil je nog een keer spelen (j/n)";
 if ($letter == "n"){  exit();
 }
