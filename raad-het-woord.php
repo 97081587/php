@@ -12,10 +12,12 @@ echo "Het woord is:  \n";
           } else {
             echo "Het woord is:  \n";
         }
+      if ($letter == "nee") {  
+        exit("zie je de volgende keer!")
     $teller++;
   }
-echo "Het woord is:" .[$array[$rndmwoord[1]]],", je hebt het geraden in $teller pogingen.\n";
-echo "Wil je nog een keer spelen (j/n)";
-if ($letter == "n"){  exit();
+;
 }
+echo "Het woord is:" .[$array[$rndmwoord[1]]],", je hebt het geraden in $teller pogingen.\n";
+echo "Wil je nog een keer spelen (ja/nee)";
 ?>
