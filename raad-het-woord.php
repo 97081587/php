@@ -1,23 +1,23 @@
 <?php
 $array = array("appel", "banaan", "tos");
-$rndmwoord = array_rand($array, 2);
+$rndmwoord = array_rand($array);
 
-$teller=1;
-
-echo "Het woord is:  \n";
-  while ( ) {
-      $letter = readline("Kies een letter: \n");
-       if ( ) {
-            echo "letter $letter komt niet voor in het woord.\n";
+$teller=0;
+//moet nog letter detectie en woord in asterisks.
+echo "Het woord is: \n";
+$letter = readline("Kies een letter: ");
+  while (// deze moet gaan loopen tot de hele woord is geraden) {
+       if (str_contains($rndmwoord, $letter)) {
+            echo "Het woord is: \n";
           } else {
-            echo "Het woord is:  \n";
+            echo "letter $letter komt niet voor in het woord.\n";
         }
-      if ($letter == "nee") {  
-        exit("zie je de volgende keer!")
-    $teller++;
-  }
-;
-}
-echo "Het woord is:" .[$array[$rndmwoord[1]]],", je hebt het geraden in $teller pogingen.\n";
+      $teller++;
+    };
+
+echo "Het woord is: $rndmwoord, je hebt het geraden in $teller pogingen.\n";
 echo "Wil je nog een keer spelen (ja/nee)";
+if ($letter == "nee") {  
+  exit("zie je de volgende keer!");   
+}
 ?>
