@@ -10,10 +10,10 @@ $teller=0;
 echo "Het woord is: \n";
 $letter = readline("Kies een letter: ");
   while ($letter != $megaarray) { // loop is ook beetje kapot
-       if (str_contains($rndmwoord, $letter)) {
+       if (array_search(" ", $megaarray, true)) {
             echo "Het woord is: \n";
           }
-       if ( !str_contains($rndmwoord, $letter)) {
+       if (array_search(" ", $megaarray)) {
             echo "letter $letter komt niet voor in het woord.\n";
           }
       $teller++;
@@ -21,6 +21,9 @@ $letter = readline("Kies een letter: ");
 
 echo "Het woord is: $rndmwoord, je hebt het geraden in $teller pogingen.\n";
 echo "Wil je nog een keer spelen (ja/nee)";
+if ($letter == "ja") {
+  header("Refresh:0");
+}
 if ($letter == "nee") {  
   exit("zie je de volgende keer!");   
 }
