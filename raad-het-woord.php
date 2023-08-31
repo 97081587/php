@@ -1,20 +1,25 @@
 <?php
 $banaan = "banaan";
 $appel = "appel";
-$zit = "zit";
-$megaarray = array($appel, $banaan, $zit);
+$fruit = "fruit";
+$megaarray = array($appel, $banaan, $fruit);
 $rndmwoord = array_rand($megaarray, 1);
 
 $teller=0;
 //hier letters tellen van woord en dan in asterisks zetten
-echo strlen($rndmwoord);
- if ($rndmwoord > 0) {
-  echo str_replace($rndmwoord, "*", $rndmwoord);
- }
-echo "het woord is: \n";
+if (strlen($rndmwoord) == 5) {
+  $geheimewoord5 = "*****";
+  echo "het woord is: " .$geheimewoord5;
+}
+if (strlen($rndmwoord) == 6) {
+  $geheimewoord6 = "******";
+  echo "het woord is: " .$geheimewoord6;
+}
+ 
+
 //hier dan de loop voor elk letter van de woord
 $letter = readline("Kies een letter: ");
-  while ($letter != $megaarray) {
+  while ( ) {
        if (array_search("1", $megaarray, true)) {
             echo "Het woord is: \n";
           }
