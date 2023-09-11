@@ -2,23 +2,21 @@
 $array = array("appel","banaan","fruit");
 $rndmwoord = array_rand($array, 1);
 
+echo "Het woord is: ";
 //hier letters tellen van woord en dan in asterisks zetten
-if (strlen($array[$rndmwoord]) == 5) {
-   $geheimewoord5 = "*****";
-    echo "het woord is: $geheimewoord5 \n";
-} elseif (strlen($array[$rndmwoord]) == 6) {
-    $geheimewoord6 = "******";
-    echo "het woord is: $geheimewoord6 \n";
+$lengte = strlen ($array[$rndmwoord]);
+for ($i=0;$i<=$lengte;$i++) {
+  echo "*";
 }
- 
+$raadwoord = "*****";
 $teller=1;
 $begin=1;
 //hier dan de loop voor elk letter van de woord
 $letter = readline("Kies een letter: ");
-  while ($letter != $array[$rndmwoord]) {
-       if (array_search("1", $array, true)) {
+  while ($rndmwoord != $raadwoord) {
+       if (($letter == $array[$rndmwoord])) {
              echo "Het woord is: \n";
-          } elseif (array_search(" ", $array)) {
+          } elseif ($letter != $array[$rndmwoord]) {
              echo "letter $letter komt niet voor in het woord.\n";
           }
       $teller++;
@@ -27,10 +25,9 @@ $letter = readline("Kies een letter: ");
 echo "Het woord is: $rndmwoord, je hebt het geraden in $teller pogingen.\n";
 echo "Wil je nog een keer spelen (ja/nee)";
 if ($letter == "ja") {
-
-}
-if ($letter == "nee") {  
-  exit("zie je de volgende keer!");   
+   echo "ja";
+} elseif ($letter == "nee") {  
+   exit("zie je de volgende keer!");   
 }
 echo "DEBUG: done";
 ?>
