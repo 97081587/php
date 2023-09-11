@@ -2,26 +2,24 @@
 $array = array("appel","banaan","fruit");
 $rndmwoord = array_rand($array, 1);
 
-$teller=0;
 //hier letters tellen van woord en dan in asterisks zetten
-if (strlen($rndmwoord) == 5) {
-  $geheimewoord5 = "*****";
-  echo "het woord is: " .$geheimewoord5;
-}
-if (strlen($rndmwoord) == 6) {
-  $geheimewoord6 = "******";
-  echo "het woord is: " .$geheimewoord6;
+if (strlen($array[$rndmwoord]) == 5) {
+   $geheimewoord5 = "*****";
+    echo "het woord is: $geheimewoord5 \n";
+} elseif (strlen($array[$rndmwoord]) == 6) {
+    $geheimewoord6 = "******";
+    echo "het woord is: $geheimewoord6 \n";
 }
  
-
+$teller=1;
+$begin=1;
 //hier dan de loop voor elk letter van de woord
 $letter = readline("Kies een letter: ");
-  while ( ) {
+  while ($letter != $array[$rndmwoord]) {
        if (array_search("1", $array, true)) {
-            echo "Het woord is: \n";
-          }
-       if (array_search(" ", $array)) {
-            echo "letter $letter komt niet voor in het woord.\n";
+             echo "Het woord is: \n";
+          } elseif (array_search(" ", $array)) {
+             echo "letter $letter komt niet voor in het woord.\n";
           }
       $teller++;
     };
@@ -34,4 +32,5 @@ if ($letter == "ja") {
 if ($letter == "nee") {  
   exit("zie je de volgende keer!");   
 }
+echo "DEBUG: done";
 ?>
