@@ -1,13 +1,13 @@
 <?php
 $array = array("leerling","cirkel","eend","veiligheidsspeld","taart","arend","verkoper","dier","goed","ballonnen","borstel","pen","koffie","knie","kast");
 $rndmwoord = array_rand($array, 1);
+$raadwoord = '';
 
 echo "Het woord is: ";
 //hier letters tellen van woord en dan in asterisks zetten
 $lengte = strlen ($array[$rndmwoord]);
-$raadwoord = '';
 for ($i=1;$i<=$lengte;$i++) {
-  echo "*";
+  echo "$raadwoord";
 }
 
 $teller=1;
