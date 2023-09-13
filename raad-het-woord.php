@@ -1,5 +1,5 @@
 <?php
-$array = array("aa");
+$array = array("a","b");
 $rndmwoord = array_rand($array, 1);
 $raadwoord = '';
 
