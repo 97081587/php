@@ -1,19 +1,22 @@
 <?php
-$array = array("a","b");
+$array = array("kaas","b");
 $rndmwoord = array_rand($array, 1);
 $raadwoord = '';
 
 echo "Het woord is: ";
 //hier letters tellen van woord en dan in asterisks zetten
 $lengte = strlen ($array[$rndmwoord]);
-for ($i=1;$i<=$lengte;$i++) {
-  echo "*";
-}
-
 $teller=1;
 $begin=1;
 //hier dan de loop voor elk letter van de woord
 $letter = readline(" Kies een letter: ");
+for ($i=1;$i<=$lengte;$i++) {
+   if (strpos($array[$rndmwoord], $letter)) {
+      echo "$raadwoord";
+   } else {
+      echo "*";
+   }
+}
   while ($array[$rndmwoord] != $raadwoord) {
        if (str_contains($array[$rndmwoord], $letter)) {
           echo "Het woord is: $raadwoord \n";
