@@ -1,5 +1,5 @@
 <?php
-$array = array("is","bak");
+$array = array("ab","cd");
 $rndmwoord = array_rand($array, 1);
 $raadwoord = '';
 
@@ -15,10 +15,10 @@ $teller=0;
  while ($array[$rndmwoord] != $raadwoord) {
    $letter = readline(" Kies een letter: ");
        if (str_contains($array[$rndmwoord], $letter)) {
-          $raadwoord = str_ireplace(str_split("*"),"$letter", "$array[$rndmwoord]");
-          echo "Het woord is: $raadwoord \n";
+            $raadwoord = str_ireplace(str_split("*"),"$letter", "$array[$rndmwoord]");
+            echo "Het woord is: $raadwoord \n";
          } else {
-             echo "letter $letter komt niet voor in het woord.\n";
+            echo "letter $letter komt niet voor in het woord.\n";
           }
       $teller++;
     };
