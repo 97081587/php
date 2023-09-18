@@ -15,11 +15,11 @@ $teller=0;
  while ($array[$rndmwoord] != $raadwoord) {
    $letter = readline(" Kies een letter: ");
        if (str_contains($array[$rndmwoord], $letter)) {
-            $raadwoord = str_ireplace(str_split("*"),"$letter", "$array[$rndmwoord]");
+            $raadwoord = str_ireplace("*","$letter", "$array[$rndmwoord]");
             echo "Het woord is: $raadwoord \n";
          } else {
             echo "letter $letter komt niet voor in het woord.\n";
-          }
+         }
       $teller++;
     };
 
