@@ -14,8 +14,7 @@ $teller=0;
 //hier dan de loop voor elk letter van de woord
  while ($array[$rndmwoord] != $raadwoord) {
    $letter = readline(" Kies een letter: ");
-       if ($raadwoord = strpos($array[$raadwoord], $letter, 0)) {
-         //str_contains($array[$rndmwoord], $letter)
+       if (str_contains($array[$rndmwoord], $letter)) {
             $raadwoord = str_ireplace("*","$letter", "$array[$rndmwoord]");
             echo "Het woord is: $raadwoord \n";
          } else {
