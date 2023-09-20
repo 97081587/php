@@ -13,15 +13,15 @@ for ($i=1;$i<=$lengte;$i++) {
 $teller=0;
 //hier dan de loop voor elk letter van de woord
  while ($array[$rndmwoord] != $raadwoord) {
-   $letter = readline(" Kies een letter: ");
+    $letter = readline(" Kies een letter: ");
        if (str_contains($array[$rndmwoord], $letter)) {
             $raadwoord = str_ireplace("*","$letter", "$array[$rndmwoord]");
             echo "Het woord is: $raadwoord \n";
-         } else {
+       } else {
             echo "letter $letter komt niet voor in het woord.\n";
-         }
+       }
       $teller++;
-    };
+   };
 
 echo "Het woord is: " .$array[$rndmwoord]; echo ", je hebt het geraden in $teller pogingen.\n Wil je nog een keer spelen (ja/nee)";
 if ($letter == "ja") {
