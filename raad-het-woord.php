@@ -2,13 +2,12 @@
 $array = array("ab","cd");
 $rndmwoord = array_rand($array, 1);
 $raadwoord = '';
-$ster = "*";
 
 echo "Het woord is: ";
 //hier letters tellen van woord en dan in asterisks zetten
-$lengte = strlen ($array[$rndmwoord]);
-for ($i=1;$i<=$lengte;$i++) {
-  echo $ster;
+ $lengte = strlen ($array[$rndmwoord]);
+ for ($i=1;$i<=$lengte;$i++) {
+  echo "*";
 }
 
 $teller=0;
@@ -18,6 +17,8 @@ $teller=0;
        if (str_contains($array[$rndmwoord], $letter)) {
             $raadwoord = str_replace("*","$letter", "$array[$rndmwoord]");
             echo "Het woord is: $raadwoord \n";
+       } elseif ($letter == " ") {
+            exit("zie je de volgende keer!");
        } else {
             echo "letter $letter komt niet voor in het woord.\n";
        }
