@@ -16,9 +16,12 @@ $teller=0;
     $letter = readline(" Kies een letter: ");
        if (str_contains($array[$rndmwoord], $letter)) {
             $letterpos = strpos($array[$rndmwoord], $letter);
-            $raadwoord = substr_replace($raadwoord,$letter,$letterpos, 0);  
+            $raadwoord = substr_replace($raadwoord,$letter,$letterpos, $lengte);
+            for ($i=1;$i<=$lengte;$i++) {
+               echo "*";
+             }
             echo "Het woord is: $raadwoord \n";
-      } else {
+       } else {
          echo "letter $letter komt niet voor in het woord.\n";
       }
       $teller++;
