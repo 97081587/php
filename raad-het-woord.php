@@ -6,7 +6,7 @@ $raadwoord = '';
 echo "Het woord is: ";
 //hier letters tellen van woord en dan in asterisks zetten
  $lengte = strlen ($array[$rndmwoord]);
- $koek = for ($i=1;$i<=$lengte;$i++) {
+ for ($i=1;$i<=$lengte;$i++) {
   echo "*";
 }
 
