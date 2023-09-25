@@ -16,15 +16,18 @@ $teller=0;
     $letter = readline(" Kies een letter: ");
        if (str_contains($array[$rndmwoord], $letter)) {
             $letterpos = strpos($array[$rndmwoord], $letter);
-            $raadwoord  = substr_replace($raadwoord,$letter,$letterpos, 1); 
-            echo "Het woord is: $raadwoord \n";
+            $raadwoord  = substr_replace($raadwoord,$letter,$letterpos, 1);
+             echo "Het woord is: ";
+            for ($i=1;$i<=$lengte;$i++) {
+               echo "$raadwoord";
+             }
        } else {
          echo "letter $letter komt niet voor in het woord.\n";
       }
       $teller++;
    };
 
-echo "Het woord is: " .$array[$rndmwoord]; echo ", je hebt het geraden in $teller pogingen.\n Wil je nog een keer spelen (ja/nee)";
+echo "\n Het woord is: " .$array[$rndmwoord]; echo ", je hebt het geraden in $teller pogingen.\n Wil je nog een keer spelen (ja/nee)";
 if ($letter == "nee") {  
    exit("zie je de volgende keer!");   
 }
