@@ -1,5 +1,5 @@
 <?php
-$array = array("ab","cd");
+$array = array("ab","cde");
 $rndmwoord = array_rand($array, 1);
 $raadwoord = '';
 
@@ -18,9 +18,7 @@ $teller=0;
             $letterpos = strpos($array[$rndmwoord], $letter);
             $raadwoord  = substr_replace($raadwoord,$letter,$letterpos, 0);
              echo "Het woord is: ";
-            for ($i=1;$i<=$lengte;$i++) {
-               echo "*";
-             }
+
        } else {
          echo "letter $letter komt niet voor in het woord.\n";
       }
