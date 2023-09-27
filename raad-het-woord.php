@@ -21,9 +21,9 @@ $teller=0;
          echo "Het woord is: ";
             for ($i=1;$i<=$lengte;$i++) {
                if (str_contains($raadwoord, $positie)) {
-                  echo $letter;
+                  echo "$letter";
                } else {
-                  echo $asterisk;
+                  echo "$asterisk";
                }
             }
        } else {
