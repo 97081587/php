@@ -20,7 +20,7 @@ $teller=0;
          $raadwoord  = substr_replace($raadwoord,$letter,$positie);   
          echo "Het woord is: ";
             for ($i=1;$i<=$lengte;$i++) {
-               if (str_contains($raadwoord, $positie)) {
+               if (is_numeric($positie)) {
                   echo "$letter";
                } else {
                   echo "$asterisk";
