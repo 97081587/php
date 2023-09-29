@@ -6,8 +6,8 @@ $asterisk = '*';
 
 echo "Het woord is: ";
 //hier letters tellen van woord en dan in asterisks zetten
- $lengte = strlen ($array[$rndmwoord]);
- for ($i=1;$i<=$lengte;$i++) {
+$lengte = strlen ($array[$rndmwoord]);
+for ($i=1;$i<=$lengte;$i++) {
   echo $asterisk;
 }
 
@@ -20,16 +20,16 @@ $teller=0;
          $raadwoord  = substr_replace($raadwoord,$letter,$positie,0);   
          echo "Het woord is: ";
             for ($i=1;$i<=$lengte;$i++) {
-               if ($raadwoord == $positie) {
-                  echo "$letter";
+               if ($positie == 0 || 1 || 2) {
+                  echo "$letter"; 
                } else {
                   echo "$asterisk";
                }
             }
-      } else {
+       } else {
          echo "letter $letter komt niet voor in het woord.\n";
-      }
-    $teller++;
+       }
+   $teller++;
  };
 
 echo "\n Het woord is: " .$array[$rndmwoord]; echo ", je hebt het geraden in $teller pogingen.\n Wil je nog een keer spelen (ja/nee)";
