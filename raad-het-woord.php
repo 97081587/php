@@ -19,7 +19,7 @@ $teller=0;
    $teller++;
       while (str_contains($array_woorden[$rndmwoord], $raad_letter)) {
          $positie = strpos($array_woorden[$rndmwoord], $raad_letter,0);
-         $raad_woord  = substr_replace($raad_woord,$raad_letter,$positie,0);
+         $raad_woord  = substr_replace($array_woorden[$rndmwoord],$raad_letter,$positie,0);
          echo $raad_woord;
       };
    if ($raad_letter != $array_woorden[$rndmwoord]) {
