@@ -11,13 +11,14 @@ $lengte = strlen ($array_woorden[$rndmwoord]);
 for ($i=1;$i<=$lengte;$i++) {
    echo $asterisk;
 }
+$raad_woord = $lengte;
 $teller=0;
 
 //hier dan de loop voor elk letter van de woord
  while ($raad_woord != $rndmwoord) {
    $raad_letter = readline(" Kies een letter: ");
    $teller++;
-      while (str_contains($array_woorden[$rndmwoord], $raad_letter)) {
+      foreach ($array_woorden as $raad_letter) {
          $positie = strpos($array_woorden[$rndmwoord], $raad_letter,0);
          $raad_woord  = substr_replace($array_woorden[$rndmwoord],$raad_letter,$positie,0);
          echo $raad_woord;
