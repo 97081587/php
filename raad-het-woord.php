@@ -9,22 +9,24 @@ echo "Het woord is: ";
 //hier letters tellen van woord en dan in asterisks zetten
 $lengte = strlen ($array_woorden[$rndmwoord]);
 for ($i=1;$i<=$lengte;$i++) {
-   echo $asterisk;
+   $raad_woord = $asterisk;
+   echo $raad_woord;
+   //$raad_woord.=$asterisk;
 }
-$raad_woord = $lengte;
 $teller=0;
 
 //hier dan de loop voor elk letter van de woord
  while ($raad_woord != $rndmwoord) {
    $raad_letter = readline(" Kies een letter: ");
    $teller++;
-      foreach ($array_woorden as $geenidee) {
-         $positie = strpos($array_woorden[$rndmwoord], $raad_letter,0);
-         $raad_woord  = substr_replace($array_woorden[$rndmwoord],$raad_letter,$positie,0);
+      foreach (str_split($raad_woord) as $char) {
+        
+         //$positie = strpos($array_woorden[$rndmwoord], $raad_letter,0);
+         //$raad_woord  = substr_replace($array_woorden[$rndmwoord],$raad_letter,$positie,0);
          echo $raad_woord;
       };
    if ($raad_letter != $array_woorden[$rndmwoord]) {
-      echo " \nletter $raad_letter komt niet voor in het woord.\n";
+      echo " letter $raad_letter komt niet voor in het woord.\n";
    }
  };
 
