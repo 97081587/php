@@ -18,13 +18,13 @@ $teller=0;
  while ($raad_woord != $rndmwoord) {
    $raad_letter = readline(" Kies een letter: ");
    $teller++;
-      foreach ($array_woorden as $raad_letter) {
+      foreach ($array_woorden as $geenidee) {
          $positie = strpos($array_woorden[$rndmwoord], $raad_letter,0);
          $raad_woord  = substr_replace($array_woorden[$rndmwoord],$raad_letter,$positie,0);
          echo $raad_woord;
       };
    if ($raad_letter != $array_woorden[$rndmwoord]) {
-      echo "letter $raad_letter komt niet voor in het woord.\n";
+      echo " \nletter $raad_letter komt niet voor in het woord.\n";
    }
  };
 
