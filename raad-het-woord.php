@@ -9,8 +9,8 @@ echo "Het woord is: ";
 //hier letters tellen van woord en dan in asterisks zetten
 $lengte = strlen ($array_woorden[$rndmwoord]);
 for ($i=1;$i<=$lengte;$i++) {
-   $raad_woord = $asterisk;
-   echo $raad_woord;
+   $raad_woord = $raad_woord.$asterisk;
+   echo $asterisk;
    //$raad_woord.=$asterisk;
 }
 $teller=0;
@@ -23,7 +23,7 @@ $teller=0;
         
          //$positie = strpos($array_woorden[$rndmwoord], $raad_letter,0);
          //$raad_woord  = substr_replace($array_woorden[$rndmwoord],$raad_letter,$positie,0);
-         echo $raad_woord;
+         echo $asterisk;
       };
    if ($raad_letter != $array_woorden[$rndmwoord]) {
       echo " letter $raad_letter komt niet voor in het woord.\n";
