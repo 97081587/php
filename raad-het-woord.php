@@ -16,18 +16,18 @@ for ($i=1;$i<=$lengte;$i++) {
 $teller=0;
 
 //hier dan de loop voor elk letter van de woord
- while ($raad_woord != $rndmwoord) {
+ while ($raad_woord != $array_woorden[$rndmwoord]) {
    $raad_letter = readline(" Kies een letter: ");
    $teller++;
-      foreach (str_split($raad_woord) as $char) {
-        
-         //$positie = strpos($array_woorden[$rndmwoord], $raad_letter,0);
-         //$raad_woord  = substr_replace($array_woorden[$rndmwoord],$raad_letter,$positie,0);
-         echo $asterisk;
+      if (str_contains($array_woorden[$rndmwoord], $raad_letter) == false) {
+         echo " letter $raad_letter komt niet voor in het woord.\n";
+      } elseif (str_contains($array_woorden[$rndmwoord], $raad_letter) == true) {
+         foreach (str_split($raad_woord) as $char) {
+           $positie = strpos($array_woorden[$rndmwoord], $raad_letter,0);
+           $raad_woord  = substr_replace($array_woorden[$rndmwoord],$raad_letter,$positie,1);
+           echo $raad_woord;
+         };
       };
-   if ($raad_letter != $array_woorden[$rndmwoord]) {
-      echo " letter $raad_letter komt niet voor in het woord.\n";
-   }
  };
 
 echo "\n Het woord is: " .$array_woorden[$rndmwoord]; echo ", je hebt het geraden in $teller pogingen.\n Wil je nog een keer spelen (ja/nee)";
