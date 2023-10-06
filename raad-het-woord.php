@@ -2,15 +2,14 @@
 $array_woorden = array("appel","herinneren","combinatie","membraan","tap","stadion","montuur","zandloper","geeuw","aankondigingen","applaus","vouwen","mail","garnering","schaaldier");
 $raad_letter = '';
 $asterisk = '*';
-$raad_woord = '';
 
 while (true){
       $rndmwoord = array_rand($array_woorden, 1);
+      $raad_woord = '';
 
    echo "Het woord is: ";
    //hier letters tellen van woord en dan in asterisks zetten
    $lengte = strlen ($array_woorden[$rndmwoord]);
-   $raad_woord = str_repeat($asterisk, $lengte);
    for ($i=1;$i<=$lengte;$i++) {
       $raad_woord = $raad_woord.$asterisk;
       echo $asterisk;
