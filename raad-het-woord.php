@@ -10,6 +10,7 @@ while (true){
    echo "Het woord is: ";
    //hier letters tellen van woord en dan in asterisks zetten
    $lengte = strlen ($array_woorden[$rndmwoord]);
+   $raad_woord = str_repeat($asterisk, $lengte);
    for ($i=1;$i<=$lengte;$i++) {
       $raad_woord = $raad_woord.$asterisk;
       echo $asterisk;
@@ -42,7 +43,7 @@ while (true){
    echo "\n Het woord is " .$array_woorden[$rndmwoord]; echo ", je hebt het geraden in $teller pogingen. \n";
    $opnieuw = readline ("Wil je nog een keer spelen (ja/nee): ");
    if (strtolower($opnieuw) !== "ja") {  
-      exit(" ");   
+      exit();   
    }
 }
 ?>
