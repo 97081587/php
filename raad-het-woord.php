@@ -23,7 +23,9 @@ while ($raad_woord != $array_woorden[$rndmwoord]) {
    $teller++;
    if (str_contains($array_woorden[$rndmwoord], $raad_letter)) {
       $raad_word_array = str_split($raad_woord);
+            //hier gaat het door elk letter heen
          foreach (str_split($array_woorden[$rndmwoord]) as $position => $letter) {
+            //als de letter gelijk is aan de raad letter dan is de letter de raad letter
             if ($letter === $raad_letter) {
                $raad_word_array[$position] = $raad_letter;
             }
