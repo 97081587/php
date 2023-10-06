@@ -31,7 +31,8 @@ while ($raad_woord != $array_woorden[$rndmwoord]) {
       $raad_woord = implode('', $raad_word_array);
       echo $raad_woord;
    } elseif (str_contains($array_woorden[$rndmwoord], $raad_letter) == false) { 
-      echo " letter $raad_letter komt niet voor in het woord.";
+      echo " letter $raad_letter komt niet voor in het woord.\n";
+      echo $raad_woord;
    }
 }
 echo "\n Het woord is " .$array_woorden[$rndmwoord]; echo ", je hebt het geraden in $teller pogingen. \n";
