@@ -1,5 +1,5 @@
 <?php
-$array_woorden = array("vrede","herinneren","combinatie","membraan","tap","stadion,","montuur","zandloper","geeuw","aankondigingen","applaus","vouwen","mail","garnering","schaaldier");
+$array_woorden = array("appel","herinneren","combinatie","membraan","tap","stadion,","montuur","zandloper","geeuw","aankondigingen","applaus","vouwen","mail","garnering","schaaldier");
 $rndmwoord = array_rand($array_woorden, 1);
 $raad_letter = '';
 $asterisk = '*';
