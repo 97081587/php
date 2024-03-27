@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    background-color: #ffeecc;
+    color: black;
+    font-family: 'EB Garamond', serif;
+}
+
+.est {
+    font-size: 17px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    float:left;
+}
+
+li a {
+    display: block;
+    border-radius: 200px;
+    padding: 8px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(245, 197, 54);
+}
+
+table {
+    border-spacing: 4px;
+    background-color: rgb(165, 165, 165);
+  }
+
+.form {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+
+.gegevens {
+    display: flex;
+    justify-content: center;
+}
+
+.banner{
+    padding: 8px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    font-size: 15px;
+}
