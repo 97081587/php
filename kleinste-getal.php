@@ -12,6 +12,5 @@ $array_nummer = array ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "
 
 $rndm_nummers = array_rand($array_nummer, 100);
 
-echo $rndm_nummers;
-
+   echo $rndm_nummers; 
 ?>
