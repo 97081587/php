@@ -13,14 +13,13 @@ $array_nummer = array ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "
 "161", "162", "163", "164", "165", "166", "167", "168", "169", "170","171", "172", "173", "174", "175", "176", "177", "178", "179", "180",  
 "181", "182", "183", "184", "185", "186", "187", "188", "189", "190","191", "192", "193", "194", "195", "196", "197", "198", "199", "200");
 
-$rndm_nummers = array_rand($array_nummer, 1);
+$rndm_nummers = array_rand($array_nummer, 100);
 
-// $rndm_nummers = rand(1, 200);
+// $rndm_nummers = rand(1, 100);
 
-echo "\n";
+// echo "\n";
 for ($i=$begin;$i<=$honderd;$i++) {
-    echo $rndm_nummers;
-    echo "\n";
+    echo $rndm_nummers[1];
 }
     //  echo "is het kleinste getal";
 ?>
