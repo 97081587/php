@@ -20,10 +20,8 @@ $rndm_nummers = array_rand($array_nummer, 100);
 // optie 2
 // $rndm_nummers = rand(1, 100);
 
-// echo "\n";
 for ($i=$begin;$i<=$honderd;$i++) {
-    // echo $rndm_nummers;
-    // echo "\n";
+    
 }
     //  echo "is het kleinste getal";
 ?>
