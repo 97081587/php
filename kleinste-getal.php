@@ -100,9 +100,10 @@
 "593";
 "611";
 
-for ($i=$begin;$i<=$honderd;$i++) {
-    if () {
-        
+while ($nummer < $honderd) {
+    if ($nummer > $honderd) {
+        $honderd
+
     }
 
 }
