@@ -102,10 +102,12 @@
 
 while ($nummer < $honderd) {
     if ($nummer > $honderd) {
-        $honderd
+        $honderd = "";
 
-    }
-
-}
+        if($nummer == $honderd) {
+            echo "Is het kleinste getal";
+        }
+    };
+};
 
 ?>
