@@ -10,14 +10,16 @@ $nummer = array("774", "581", "117", "668", "692", "616", "915", "366", "194", "
 "66", "342", "387", "924", "504", "640", "906", "241", "665", "333",
 "512", "266", "799", "858", "874", "750", "456", "795", "593", "611");
 
+$vergelijknummer = 50;
+
 $nummertest = array_rand($nummer, 1);
 
 
-while ($nummertest < 100) {
-    if ($nummertest > 100) {
-        100 = "99";
+while ($nummertest < $vergelijknummer) {
+    if ($nummertest > $vergelijknummer) {
+        $vergelijknummer = "99";
 
-        if($nummertest == 100) {
+        if($nummertest == $vergelijknummer) {
             echo "Is het kleinste getal";
         }
     };
