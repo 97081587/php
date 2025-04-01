@@ -14,6 +14,7 @@ $vergelijknummer = 50;
 
 $nummertest = array_rand($nummer, 1);
 
+// echo $nummertest;
 
 while ($nummertest < $vergelijknummer) {
     if ($nummertest > $vergelijknummer) {
