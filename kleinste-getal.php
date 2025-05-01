@@ -10,25 +10,22 @@ $nummer = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
 "81", "82", "83", "84", "85", "86", "87", "88", "89", "90",
 "91", "92", "93", "94", "95", "96", "97", "98", "99", "100");
 
-hoofdnummer = 100;
+$hoofdnummer = 101;
 
-// $nummertest = array_rand($nummer, 1);
-
-// echo $nummertest;
-
-foreach
+//loopt door de nummer array
+// foreach
 
 
-while ($vergelijknummer != $hoofdnummer) {
+//vergelijken met de hoofdnummer
+while ($vergelijknummer !== $hoofdnummer) {
     if ($vergelijknummer < $hoofdnummer) {
         $hoofdnummer - 1;
     } else if ($vergelijknummer > $hoofdnummer) {
         $hoofdnummer + 1;
     };
-
-    if($nummertest === $vergelijknummer) {
-        echo "Is het kleinste getal";
-    }
 };
 
+if($hoofdnummer === $vergelijknummer) {
+    echo "Is het kleinste getal";
+}
 ?>
