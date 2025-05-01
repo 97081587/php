@@ -12,20 +12,18 @@ $nummer = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
 
 $vergelijknummer = 100;
 
-$nummertest = array_rand($nummer, 1);
+// $nummertest = array_rand($nummer, 1);
 
 // echo $nummertest;
 
 while ($nummertest != $vergelijknummer) {
     if ($nummertest < $vergelijknummer) {
         $vergelijknummer - 1;
-    }
-
-    if ($nummertest > $vergelijknummer) {
+    } else if ($nummertest > $vergelijknummer) {
         $vergelijknummer + 1;
     };
 
-    if($nummertest == $vergelijknummer) {
+    if($nummertest === $vergelijknummer) {
         echo "Is het kleinste getal";
     }
 };
