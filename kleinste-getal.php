@@ -29,7 +29,8 @@
     //loopt door de nummer array
     //moet een voor een
     foreach ($vergelijknummer as $value) {
-        echo "\$array: $value.\n";
+        // $value is alles in een keer
+        echo "$value \n";
 
         //vergelijken met de hoofdnummer
         // while ($vergelijknummer !== $hoofdnummer) {
