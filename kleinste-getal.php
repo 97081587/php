@@ -29,8 +29,8 @@
     //loopt door de nummer array
     //moet een voor een
     foreach ($vergelijknummer as $value) {
-        echo "Current element of \$array: $value[1].\n";
-        
+        echo "\$array: $value.\n";
+
         //vergelijken met de hoofdnummer
         // while ($vergelijknummer !== $hoofdnummer) {
         //     if ($vergelijknummer < $hoofdnummer) {
