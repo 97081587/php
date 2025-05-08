@@ -29,20 +29,20 @@
     //moet een voor een door de nummer array loopen
     // foreach ($vergelijknummer as $value) {
         // $value is alles in een keer
-        echo end($vergelijknummer);
+        // echo end($vergelijknummer);
 
         //vergelijken met de hoofdnummer
-        // while ($vergelijknummer !== $hoofdnummer) {
-        //     if ($vergelijknummer < $hoofdnummer) {
-        //         echo "-1 test";
-        //         // $hoofdnummer - 1;
-        //     } 
-        //     // ???
-        //     else if ($vergelijknummer > $hoofdnummer) {
-        //         echo "+1 test";
-        //         // $hoofdnummer + 1;
-        //     };
-        // };
+        while ($vergelijknummer !== $hoofdnummer) {
+            if ($vergelijknummer < $hoofdnummer) {
+                echo "-1 test";
+                // $hoofdnummer - 1;
+            } 
+            // ???
+            else if ($vergelijknummer > $hoofdnummer) {
+                echo "+1 test";
+                // $hoofdnummer + 1;
+            };
+        };
 
         if($hoofdnummer === $vergelijknummer) {
             echo "$hoofdnummer Is het kleinste getal";
