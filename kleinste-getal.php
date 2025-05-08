@@ -26,11 +26,10 @@
     // user input?
     $hoofdnummer = 101;
 
-    //loopt door de nummer array
-    //moet een voor een
-    foreach ($vergelijknummer as $value) {
+    //moet een voor een door de nummer array loopen
+    // foreach ($vergelijknummer as $value) {
         // $value is alles in een keer
-        echo "$value \n";
+        echo end($vergelijknummer);
 
         //vergelijken met de hoofdnummer
         // while ($vergelijknummer !== $hoofdnummer) {
@@ -48,6 +47,6 @@
         if($hoofdnummer === $vergelijknummer) {
             echo "$hoofdnummer Is het kleinste getal";
         }
-    }
+    // }
     
 ?>
