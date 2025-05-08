@@ -31,26 +31,26 @@
     //moet een voor een door de nummer array loopen
     // moet eerst beginnen bij de begin
     for ($i=$lengte;$i>0;$i--) {
-        echo $vergelijknummer;
+        // echo "$i test";
 
         //vergelijken met de hoofdnummer
-        // while ($ !== $hoofdnummer) {
-            // if ($ < $hoofdnummer) {
-            //     echo "-1 test";
-            //     $hoofdnummer - 1;
-            //     // moet verder gaan
-            // } 
-            // // ???
-            // else if ($ > $hoofdnummer) {
-            //     echo "+1 test";
-            //     $hoofdnummer + 1;
-            //     // moet verder gaan
-            // };
+        // while ($i !== $hoofdnummer) {
+            if ($i < $hoofdnummer) {
+                echo "-1 test";
+                $hoofdnummer - 1;
+                // moet verder gaan
+            } 
+            // ???
+            else if ($i > $hoofdnummer) {
+                echo "+1 test";
+                $hoofdnummer + 1;
+                // moet verder gaan
+            };
         // };
 
-        // if($hoofdnummer === $) {
-        //     echo "$hoofdnummer Is het kleinste getal";
-        // };
+        if($hoofdnummer === $i) {
+            echo "$hoofdnummer Is het kleinste getal";
+        };
     };
     
 ?>
