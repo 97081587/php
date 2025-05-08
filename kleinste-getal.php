@@ -23,31 +23,34 @@
     // "66", "342", "387", "924", "504", "640", "906", "241", "665", "333",
     // "512", "266", "799", "858", "874", "750", "456", "795", "593", "611");
 
+    $lengte = count($vergelijknummer);
+
     // user input?
     $hoofdnummer = 101;
 
     //moet een voor een door de nummer array loopen
     // moet eerst beginnen bij de begin
-    for (let i = 0; i < vergelijknummer.length; i++) {
+    for ($i=$lengte;$i>0;$i--) {
+        echo $vergelijknummer;
 
         //vergelijken met de hoofdnummer
-        // while ($x !== $hoofdnummer) {
-            // if ($x < $hoofdnummer) {
+        // while ($ !== $hoofdnummer) {
+            // if ($ < $hoofdnummer) {
             //     echo "-1 test";
             //     $hoofdnummer - 1;
             //     // moet verder gaan
             // } 
             // // ???
-            // else if ($x > $hoofdnummer) {
+            // else if ($ > $hoofdnummer) {
             //     echo "+1 test";
             //     $hoofdnummer + 1;
             //     // moet verder gaan
             // };
         // };
 
-        if($hoofdnummer === $x) {
-            echo "$hoofdnummer Is het kleinste getal";
-        };
+        // if($hoofdnummer === $) {
+        //     echo "$hoofdnummer Is het kleinste getal";
+        // };
     };
     
 ?>
