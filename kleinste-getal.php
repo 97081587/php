@@ -30,7 +30,7 @@
 
     //loopt een voor een door de nummer array
     for ($i=$lengte;$i>0;$i--) {
-        echo "$i test \n";
+        // echo "$i test \n";
         echo "$vergelijknummer[0] test \n";
 
         //vergelijken met de hoofdnummer
