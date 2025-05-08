@@ -28,26 +28,24 @@
 
     //moet een voor een door de nummer array loopen
     // moet eerst beginnen bij de begin
-    foreach ($vergelijknummer as $x) {
-        // $value is alles in een keer
-        echo "$x \n";
+    for (let i = 0; i < vergelijknummer.length; i++) {
 
         //vergelijken met de hoofdnummer
-        // while ($vergelijknummer !== $hoofdnummer) {
-        //     if ($vergelijknummer < $hoofdnummer) {
-        //         echo "-1 test";
-        //         // $hoofdnummer - 1;
-        //         // moet verder gaan
-        //     } 
-        //     // ???
-        //     else if ($vergelijknummer > $hoofdnummer) {
-        //         echo "+1 test";
-        //         // $hoofdnummer + 1;
-        //         // moet verder gaan
-        //     };
+        // while ($x !== $hoofdnummer) {
+            // if ($x < $hoofdnummer) {
+            //     echo "-1 test";
+            //     $hoofdnummer - 1;
+            //     // moet verder gaan
+            // } 
+            // // ???
+            // else if ($x > $hoofdnummer) {
+            //     echo "+1 test";
+            //     $hoofdnummer + 1;
+            //     // moet verder gaan
+            // };
         // };
 
-        if($hoofdnummer === $vergelijknummer) {
+        if($hoofdnummer === $x) {
             echo "$hoofdnummer Is het kleinste getal";
         };
     };
