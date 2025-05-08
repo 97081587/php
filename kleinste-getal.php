@@ -1,5 +1,5 @@
 <?php
-    // 1 tot 100
+    // 100 tot 1
     $vergelijknummer = array("100", "99", "98", "97", "96", "95", "94", "93", "92", "91",
     "90", "89", "88", "87", "86", "85", "84", "83", "82", "81",
     "80", "79", "78", "77", "76", "75", "74", "73", "72", "71",
@@ -28,21 +28,22 @@
 
     //moet een voor een door de nummer array loopen
     // moet eerst beginnen bij de begin
-    // foreach ($vergelijknummer as $value) {
+    foreach ($vergelijknummer as $x => $y) {
         // $value is alles in een keer
+        echo "$x: $y \n";
 
         //vergelijken met de hoofdnummer
         // while ($vergelijknummer !== $hoofdnummer) {
-            if ($vergelijknummer < $hoofdnummer) {
-                echo "-1 test";
-                // $hoofdnummer - 1;
-            } 
-            // ???
-            else if ($vergelijknummer > $hoofdnummer) {
-                echo "+1 test";
-                // $hoofdnummer + 1;
-            };
-        // };
+            // if ($vergelijknummer < $hoofdnummer) {
+            //     echo "-1 test";
+            //     // $hoofdnummer - 1;
+            // } 
+            // // ???
+            // else if ($vergelijknummer > $hoofdnummer) {
+            //     echo "+1 test";
+            //     // $hoofdnummer + 1;
+            // };
+        };
 
         if($hoofdnummer === $vergelijknummer) {
             echo "$hoofdnummer Is het kleinste getal";
