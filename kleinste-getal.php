@@ -38,13 +38,13 @@
         // while ($vergelijknummer[$i] !== $hoofdnummer) {
             if ($vergelijknummer[$i] < $hoofdnummer) {
                 echo "-1 test \n";
-                // $hoofdnummer - 1;
+                // $hoofdnummer - $vergelijknummer[$i];
                 // moet verder gaan
             } 
             // voor als de hoofdnummer kleiner is dan het vergelijknummer
             else if ($vergelijknummer[$i] > $hoofdnummer) {
                 echo "+1 test \n";
-                // $hoofdnummer + 1;
+                // $hoofdnummer + $vergelijknummer[$i];
                 // moet verder gaan
             };
         // };
