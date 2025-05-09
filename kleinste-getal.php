@@ -23,6 +23,8 @@
     // "66", "342", "387", "924", "504", "640", "906", "241", "665", "333",
     // "512", "266", "799", "858", "874", "750", "456", "795", "593", "611");
 
+
+    // voor als er meer dan 100 nummers zijn
     $lengte = count($vergelijknummer);
 
     // user input?
@@ -33,19 +35,19 @@
         // echo "$vergelijknummer[$i] test \n";
 
         //vergelijken met de hoofdnummer
-        while ($vergelijknummer[$i] !== $hoofdnummer) {
+        // while ($vergelijknummer[$i] !== $hoofdnummer) {
             if ($vergelijknummer[$i] < $hoofdnummer) {
                 echo "-1 test";
                 $hoofdnummer - 1;
                 // moet verder gaan
             } 
-            // ???
+            // voor als de hoofdnummer kleiner is dan het vergelijknummer
             else if ($vergelijknummer[$i] > $hoofdnummer) {
                 echo "+1 test";
                 $hoofdnummer + 1;
                 // moet verder gaan
             };
-        };
+        // };
 
         if($hoofdnummer === $vergelijknummer[$i] ) {
             echo "$hoofdnummer Is het kleinste getal";
