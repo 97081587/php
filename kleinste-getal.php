@@ -37,21 +37,21 @@
         //vergelijken met de hoofdnummer
         // while ($vergelijknummer[$i] !== $hoofdnummer) {
             if ($vergelijknummer[$i] < $hoofdnummer) {
-                echo "-1 test \n";
-                // $hoofdnummer - $vergelijknummer[$i];
-                // moet verder gaan
+                // echo "-1 test \n";
+                $HNummerMinVNummer = $hoofdnummer - $vergelijknummer[$i];
+                echo "$HNummerMinVNummer \n";
             } 
             // voor als de hoofdnummer kleiner is dan het vergelijknummer
             else if ($vergelijknummer[$i] > $hoofdnummer) {
-                echo "+1 test \n";
-                // $hoofdnummer + $vergelijknummer[$i];
-                // moet verder gaan
+                // echo "+1 test \n";
+                $HNummerPlusVNummer = $hoofdnummer + $vergelijknummer[$i];
+                echo "$HNummerPlusVNummer \n";
             };
         // };
 
-        if($hoofdnummer === $vergelijknummer[$i] ) {
-            echo "$hoofdnummer Is het kleinste getal";
-        };
+        // if($hoofdnummer === $vergelijknummer[$i] ) {
+        //     echo "$hoofdnummer Is het kleinste getal";
+        // };
     };
     
 ?>
