@@ -37,13 +37,13 @@
         //vergelijken met de hoofdnummer
         //alle kleine getallen moeten naar de 1000 gaan en waarvan de meeste getallen zijn toegevoegd, is het kleinste getal.
             if ($vergelijknummer[$i] < $hoofdnummer) {
-                echo "$vergelijknummer[$i] \n";
+                // echo "$vergelijknummer[$i] \n";
                 $RestNummer = 1000 - $vergelijknummer[$i];
                 echo "$RestNummer \n";
             } 
             // voor als de hoofdnummer kleiner is dan het vergelijknummer, deze zijn niet de kleinste getallen.
             else if ($vergelijknummer[$i] > $hoofdnummer) {
-                echo "Dit is geen kleine getal. \n";
+                // echo "Dit is geen kleine getal. \n";
             };
 
         // if($hoofdnummer === $vergelijknummer[$i] ) {
