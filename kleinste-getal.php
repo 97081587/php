@@ -43,7 +43,6 @@
             } 
             // voor als de hoofdnummer kleiner is dan het vergelijknummer, deze zijn niet de kleinste getallen.
             else if ($vergelijknummer[$i] > $hoofdnummer) {
-                // echo "+1 test \n";
                 echo "Dit is geen kleine getal. \n";
             };
 
