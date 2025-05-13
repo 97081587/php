@@ -28,28 +28,26 @@
     $lengte = count($vergelijknummer);
 
     // user input?
-    $hoofdnummer = 101;
+    $hoofdnummer = 501;
 
     //loopt een voor een door de nummer array
     for ($i=0;$i<$lengte;$i++) {
         // echo "$vergelijknummer[$i] test \n";
 
         //vergelijken met de hoofdnummer
-        // while ($vergelijknummer[$i] !== $hoofdnummer) {
             if ($vergelijknummer[$i] < $hoofdnummer) {
                 // echo "-1 test \n";
-                // $HNummerMinVNummer = $hoofdnummer - $vergelijknummer[$i];
                 $HNummerMinVNummer = $hoofdnummer + $vergelijknummer[$i];
-                echo "$HNummerMinVNummer \n";
+                $HNummerMinMinVNummer = $HNummerMinVNummer - $hoofdnummer; 
+                echo "$HNummerMinMinVNummer \n";
             } 
             // voor als de hoofdnummer kleiner is dan het vergelijknummer
             else if ($vergelijknummer[$i] > $hoofdnummer) {
                 // echo "+1 test \n";
-                // $HNummerPlusVNummer = $hoofdnummer + $vergelijknummer[$i];
-                $HNummerPlusVNummer =  $vergelijknummer[$i] - $hoofdnummer;
-                echo "$HNummerPlusVNummer \n";
+                $HNummerPlusVNummer = $hoofdnummer - $vergelijknummer[$i];
+                $HNummerPlusPlusVNummer = $HNummerPlusVNummer + $hoofdnummer;      
+                echo "$HNummerPlusPlusVNummer \n";
             };
-        // };
 
         // if($hoofdnummer === $vergelijknummer[$i] ) {
         //     echo "$hoofdnummer Is het kleinste getal";
