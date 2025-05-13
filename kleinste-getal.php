@@ -28,7 +28,7 @@
     $lengte = count($vergelijknummer);
 
     // user input?
-    $hoofdnummer = 501;
+    $hoofdnummer = 500;
 
     //loopt een voor een door de nummer array
     for ($i=0;$i<$lengte;$i++) {
@@ -38,20 +38,17 @@
         //alle kleine getallen moeten naar de 1000 gaan en waarvan de meeste getallen zijn toegevoegd, is het kleinste getal.
             if ($vergelijknummer[$i] < $hoofdnummer) {
                 // echo "-1 test \n";
-                $HNummerMinVNummer = $hoofdnummer - $vergelijknummer[$i];
-                echo "$HNummerMinVNummer \n";
+                // $HNummerMinVNummer = $hoofdnummer - $vergelijknummer[$i];
+                // echo "$HNummerMinVNummer \n";
+                echo "$vergelijknummer[$i] \n";
+
                 // $HNummerMinMinVNummer = $HNummerMinVNummer - $hoofdnummer; 
                 // echo "$HNummerMinMinVNummer \n";
             } 
-            // voor als de hoofdnummer kleiner is dan het vergelijknummer
-            //deze zijn niet de kleinste getallen
+            // voor als de hoofdnummer kleiner is dan het vergelijknummer, deze zijn niet de kleinste getallen.
             else if ($vergelijknummer[$i] > $hoofdnummer) {
                 // echo "+1 test \n";
-                $HNummerPlusVNummer = $hoofdnummer + $vergelijknummer[$i];
-                echo "$HNummerPlusVNummer \n";
-
-                // $HNummerPlusPlusVNummer = $HNummerPlusVNummer + $hoofdnummer;      
-                // echo "$HNummerPlusPlusVNummer \n";
+                echo "Dit is geen kleine getal. \n";
             };
 
         // if($hoofdnummer === $vergelijknummer[$i] ) {
