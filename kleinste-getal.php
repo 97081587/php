@@ -37,13 +37,9 @@
         //vergelijken met de hoofdnummer
         //alle kleine getallen moeten naar de 1000 gaan en waarvan de meeste getallen zijn toegevoegd, is het kleinste getal.
             if ($vergelijknummer[$i] < $hoofdnummer) {
-                // echo "-1 test \n";
-                // $HNummerMinVNummer = $hoofdnummer - $vergelijknummer[$i];
-                // echo "$HNummerMinVNummer \n";
                 echo "$vergelijknummer[$i] \n";
-
-                // $HNummerMinMinVNummer = $HNummerMinVNummer - $hoofdnummer; 
-                // echo "$HNummerMinMinVNummer \n";
+                $RestNummer = 1000 - $vergelijknummer[$i];
+                echo "$RestNummer \n";
             } 
             // voor als de hoofdnummer kleiner is dan het vergelijknummer, deze zijn niet de kleinste getallen.
             else if ($vergelijknummer[$i] > $hoofdnummer) {
