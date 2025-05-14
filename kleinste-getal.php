@@ -27,8 +27,9 @@
             if ($vergelijknummer[$i] < $hoofdnummer) {
                 $RestNummer = 1000 - $vergelijknummer[$i];
                 // echo "$RestNummer \n";
-                if ($RestNummer > 980 ) {
+                if ($RestNummer > $.. ) {
                     // echo "$RestNummer \n";
+
                     // hier gaat de kleinste getal terug naar beginwaarde.
                     $ResultaatNummer = 1000 - $RestNummer;
                     echo "$ResultaatNummer Is het kleinste getal \n";
