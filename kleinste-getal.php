@@ -19,7 +19,6 @@
     // user input?
     $hoofdnummer = 500;
 
-    //loopt een voor een door de nummer array
     for ($i=0;$i<$lengte;$i++) {
         // echo "$vergelijknummer[$i] test \n";
 
@@ -28,18 +27,17 @@
             if ($vergelijknummer[$i] < $hoofdnummer) {
                 $RestNummer = 1000 - $vergelijknummer[$i];
                 // echo "$RestNummer \n";
-                if ($RestNummer == ... ) {
-
-
+                if ($RestNummer > 980 ) {
+                    // echo "$RestNummer \n";
                     // hier gaat de kleinste getal terug naar beginwaarde.
                     $ResultaatNummer = 1000 - $RestNummer;
                     echo "$ResultaatNummer Is het kleinste getal \n";
                 }              
             } 
             // voor als de hoofdnummer kleiner is dan het vergelijknummer, deze zijn niet de kleinste getallen.
-            else if ($vergelijknummer[$i] > $hoofdnummer) {
-                // echo "Dit is geen kleine getal. \n";
-            };
+            // else if ($vergelijknummer[$i] > $hoofdnummer) {
+            //     echo "Dit is geen kleine getal. \n";
+            // };
     };
     
 ?>
