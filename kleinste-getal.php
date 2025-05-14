@@ -1,7 +1,7 @@
 <?php
 
     // 100 willekeurige nummers
-    $vergelijknummer = array("774", "581", "117", "668", "692", "616", "915", "366", "194", "708",
+    $VergelijkNummer = array("774", "581", "117", "668", "692", "616", "915", "366", "194", "708",
     "362", "307", "197", "318", "638", "93", "139", "730", "283", "880",
     "128", "851", "448", "63", "274", "384", "84", "776", "674", "381",
     "659", "808", "814", "122", "666", "629", "189", "584", "972", "679",
@@ -14,20 +14,20 @@
 
 
     // voor als er meer dan 100 nummers zijn
-    $lengte = count($vergelijknummer);
+    $Lengte = count($VergelijkNummer);
 
     // user input?
-    $hoofdnummer = 500;
+    $HoofdNummer = 500;
 
-    for ($i=0;$i<$lengte;$i++) {
+    for ($i=0;$i<$Lengte;$i++) {
         // echo "$vergelijknummer[$i] test \n";
 
         //vergelijken met de hoofdnummer
             //alle kleine getallen moeten naar de 1000 gaan en waarvan de meeste getallen zijn toegevoegd, is het kleinste getal.
-            if ($vergelijknummer[$i] < $hoofdnummer) {
-                $RestNummer = 1000 - $vergelijknummer[$i];
+            if ($VergelijkNummer[$i] < $HoofdNummer) {
+                $RestNummer = 1000 - $VergelijkNummer[$i];
                 // echo "$RestNummer \n";
-                if ($RestNummer > $.. ) {
+                if ($RestNummer > $HoofdNummer ) {
                     // echo "$RestNummer \n";
 
                     // hier gaat de kleinste getal terug naar beginwaarde.
