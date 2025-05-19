@@ -28,7 +28,7 @@
                 $RestNummer = 1000 - $VergelijkNummer[$i];
                 // echo "$RestNummer \n";
                 if ($RestNummer > 980) {
-                    echo "$RestNummer \n";
+                    // echo "$RestNummer \n";
 
                     // hier gaat de kleinste getal terug naar beginwaarde.
                     $ResultaatNummer = 1000 - $RestNummer;
