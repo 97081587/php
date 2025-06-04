@@ -6,7 +6,7 @@ $VergelijkNummer = fopen('kleinste-getal.txt', 'r');
 $EersteRegel = fgets($VergelijkNummer);
 fclose($VergelijkNummer);
 
-echo $EersteRegel; 
+// echo $EersteRegel; 
 
 $HoofdNummer = 0;
 
