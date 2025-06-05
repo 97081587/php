@@ -1,18 +1,18 @@
 <?php
-
-// $VergelijkNummer = file_get_contents('kleinste-getal.txt');
-
 $VergelijkNummer = fopen('kleinste-getal.txt', 'r');
-$EersteRegel = fgets($VergelijkNummer);
-fclose($VergelijkNummer);
-
-// echo $EersteRegel; 
-
 $HoofdNummer = 0;
 
-if ($HoofdNummer < $EersteRegel) {
-    $HoofdNummer = $EersteRegel;
-    echo $HoofdNummer;
+//stopt bij de honderd en end of file
+for ($i=0;$i<100 && !feof($VergelijkNummer);$i++) {
+    $Regel = fgets($VergelijkNummer);
+    echo $Regel; 
+
+    // if ($HoofdNummer < $Regel) {
+    //     $HoofdNummer = $Regel;
+    //     // echo $HoofdNummer;
+    // } 
 }
+
+fclose($VergelijkNummer);
 
 ?>
