@@ -1,7 +1,7 @@
 <?php
 $VergelijkNummer = fopen('kleinste-getal.txt', 'r');
 $regels = [];
-$HoofdNummer = " ";
+$HoofdNummer = '';
 
 //stopt bij de honderd en end of file
 for ($i=0;$i<100 && !feof($VergelijkNummer);$i++) {
@@ -18,14 +18,14 @@ for ($i=0;$i<100 && !feof($VergelijkNummer);$i++) {
 fclose($VergelijkNummer); 
 
 foreach ($regels as $Regel) {
-    echo $Regel;
-    // if ($HoofdNummer < $Regel) {
-    //     $HoofdNummer = $Regel;
-    //     echo $HoofdNummer;
-    // } else {
-    //     $HoofdNummer != $Regel;
-    // } 
     // echo $Regel;
+    if ($HoofdNummer < $Regel) {
+        $HoofdNummer = $Regel;
+        echo $HoofdNummer;
+    } else {
+        $HoofdNummer != $Regel;
+    } 
+    echo $Regel;
 }
 
 ?>
