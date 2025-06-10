@@ -21,11 +21,12 @@ foreach ($regels as $Regel) {
     // echo $Regel;
     if ($HoofdNummer < $Regel) {
         $HoofdNummer = $Regel;
-        echo $HoofdNummer;
-    } else {
+        // echo $HoofdNummer;
+    } elseif ($HoofdNummer > $Regel) {
         $HoofdNummer != $Regel;
+        echo $HoofdNummer;
     } 
-    echo $Regel;
+    // echo $Regel;
 }
 
 ?>
