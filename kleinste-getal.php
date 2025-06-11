@@ -23,7 +23,7 @@ fclose($VergelijkNummer);
         $HoofdNummer = $Regel;
         echo $HoofdNummer;
     }
-     elseif ($HoofdNummer > $Regel) {
+    elseif ($HoofdNummer > $Regel) {
         $HoofdNummer != $Regel;
         echo $HoofdNummer;
     } 
