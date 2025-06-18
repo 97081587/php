@@ -3,13 +3,15 @@ $VergelijkNummer = fopen('kleinste-getal10.txt', 'r');
 $regels = [];
 $HoofdNummer = "";
 
+$EersteRegel = fgets($VergelijkNummer);
+// echo $EersteRegel;
+if($HoofdNummer === "") {
+    $HoofdNummer = $EersteRegel; // Zet de eerste regel als hoofdnummer
+}
+
 //stopt bij de honderd
 for ($i=0;$i<10;$i++) {
     $Regel = fgets($VergelijkNummer);
-    echo $Regel;
-    if($HoofdNummer === "") {
-        $HoofdNummer = $Regel; // Zet de eerste regel als hoofdnummer
-    }
 
     //checkt of de regel niet leeg is
     if ($Regel !== false) {
@@ -17,13 +19,12 @@ for ($i=0;$i<10;$i++) {
         $regels[] = $Regel;
     }
 
-
     if ($HoofdNummer <= $Regel) {
         $HoofdNummer === $Regel;
-        // echo $HoofdNummer;
+        echo $HoofdNummer;
         // $i++;
     } elseif ($HoofdNummer >= $Regel) {
-        // echo $HoofdNummer;
+        echo $HoofdNummer;
         //   $i++;
     } 
 }
