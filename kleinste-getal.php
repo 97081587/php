@@ -13,7 +13,7 @@ if($HoofdNummer === "") {
 //stopt bij de honderd en end of file
 for ($i=0;$i<10 && !feof($VergelijkNummer);$i++) {
     $Regel = fgets($VergelijkNummer);
-    echo $Regel;
+    // echo $Regel;
 
     //checkt of de regel niet leeg is
     if ($Regel !== false) {
@@ -23,7 +23,7 @@ for ($i=0;$i<10 && !feof($VergelijkNummer);$i++) {
 
     if ($HoofdNummer <= $Regel) {
         $HoofdNummer = $Regel;
-        // echo $HoofdNummer;
+        echo $HoofdNummer;
         // $i++;
     } elseif ($HoofdNummer >= $Regel) {
         // echo $HoofdNummer;
