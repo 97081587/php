@@ -10,8 +10,8 @@ if($HoofdNummer === "") {
     // echo $HoofdNummer;
 }
 
-//stopt bij de honderd
-for ($i=0;$i<10;$i++) {
+//stopt bij de honderd en end of file
+for ($i=0;$i<10 && !feof($VergelijkNummer);$i++) {
     $Regel = fgets($VergelijkNummer);
     echo $Regel;
 
