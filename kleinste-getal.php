@@ -1,48 +1,23 @@
 <?php
-$VergelijkNummer = fopen('kleinste-getal10.txt', 'r');
-$regels = [];
+$VergelijkNummer = fopen('kleinste-getal.txt', 'r');
 $HoofdNummer = "";
 
+// Zet de eerste regel als hoofdnummer
 $EersteRegel = fgets($VergelijkNummer);
-// echo $EersteRegel;
 if($HoofdNummer === "") {
-    $HoofdNummer = $EersteRegel; // Zet de eerste regel als hoofdnummer
-    // echo $HoofdNummer;
+    $HoofdNummer = $EersteRegel; 
 }
 
 //stopt bij de honderd en end of file
-for ($i=0;$i<10 && !feof($VergelijkNummer);$i++) {
-    $Regel = fgets($VergelijkNummer);
-    // echo $Regel;
-
-    //checkt of de regel niet leeg is
-    if ($Regel !== false) {
-        //van alle regels naar een regel
-        $regels[] = $Regel;
+    for ($i=0;$i<100 && !feof($VergelijkNummer);$i++) {
+        $Regel = fgets($VergelijkNummer);
+        
+        if ($HoofdNummer >= $Regel) {
+            $HoofdNummer = $Regel;
+        }
     }
-
-    if ($HoofdNummer >= $Regel) {
-        $HoofdNummer = $Regel;
-        echo $HoofdNummer;
-        // $i++;
-    } elseif ($HoofdNummer <= $Regel) {
-        // echo $HoofdNummer;
-        //   $i++;
-    } 
-}
 
 fclose($VergelijkNummer); 
 
-// foreach ($regels as $Regel) {
-    // echo $Regel;
-    // if ($HoofdNummer < $Regel) {
-    //     $HoofdNummer = $Regel;
-        // echo $HoofdNummer;
-        // echo $Regel;
-    // } elseif ($HoofdNummer > $Regel) {
-    //       $i++;
-    // } 
-    // echo $Regel;
-// }
-
+echo "Het kleinste getal is: $HoofdNummer \n";
 ?>
