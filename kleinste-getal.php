@@ -21,11 +21,11 @@ for ($i=0;$i<10 && !feof($VergelijkNummer);$i++) {
         $regels[] = $Regel;
     }
 
-    if ($HoofdNummer <= $Regel) {
+    if ($HoofdNummer >= $Regel) {
         $HoofdNummer = $Regel;
         echo $HoofdNummer;
         // $i++;
-    } elseif ($HoofdNummer >= $Regel) {
+    } elseif ($HoofdNummer <= $Regel) {
         // echo $HoofdNummer;
         //   $i++;
     } 
