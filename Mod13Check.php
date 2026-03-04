@@ -2,28 +2,18 @@
 
 $klantNummer = readline("Voer een klantnummer in: ");
 
-$nummerLengte = strlen($klantNummer);
+$zonderNullen = str_replace('0', '', $klantNummer);
 
 $totaal = 0;
 
-// echo $klantNummer . "\n";
-// echo $nummerLengte . "\n";
-
-// door klantnummer loop
-foreach(str_split($klantNummer) as $cijfer) {
-    // echo $klantNummerApart[$i];
-
-    // 0 skippen
-    if ($cijfer != '0') {    
-
-        // totaal zonder 0 optellen
-            $totaal += (int)$cijfer;
-
-        echo $totaal;
-
-    } 
+foreach (str_split($zonderNullen) as $cijfer) {
+    $totaal += (int)$cijfer;
 }
 
-// echo implode('', $klantNummerApart);
+if ($totaal % 13 === 0) {
+    echo "Het klantnummer is geldig.\n";
+} else {
+    echo "Het klantnummer is ongeldig.\n";
+}
 
 ?>
