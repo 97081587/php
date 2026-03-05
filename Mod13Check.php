@@ -8,7 +8,7 @@ $zonderNullen = str_replace('0', '', $klantNummer);
 $totaal = 0;
 
 foreach (str_split($zonderNullen) as $cijfer) {
-    // alle losse cijfers optellen
+    // alle losse cijfers optellen en in totaal zetten
     $totaal += (int)$cijfer;
 }
 
