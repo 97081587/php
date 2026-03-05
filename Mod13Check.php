@@ -5,7 +5,7 @@ $prefix = '2401160930';
 //10 klantnummers genereren
 for ($i = 0; $i < 10; $i++) {
 
-    //   mod 13 check
+    // loopt tot mod 13 is 0
     do {
         // willekeurige 4 cijferige nummer genereren
         $randEndNr = rand(1000, 9999);
