@@ -4,6 +4,7 @@ $input = readline("Voer een klantnummer in: ");
 // splits de invoer in meerdere klantnummers
 $klantnummers = explode(" ", $input);
 
+//loopt door elk klantnummer heen
 foreach ($klantnummers as $klantnummer) {
 
     // skipt de 0 / vervangt de 0 met een lege string
