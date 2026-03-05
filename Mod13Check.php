@@ -1,24 +1,16 @@
 <?php
-$array = str_split(readline("Voer een klantnummer in: "));
+$input = readline("Voer een klantnummer in: ");
 
-// skipt de 0 / vervangt de 0 met een lege string
-$zonderNullen = str_replace('0', '', $array);
+// splits de invoer in meerdere klantnummers
+$klantnummers = explode(" ", $input);
 
-//maakt er een string van
-$ZonderNullenString = implode('', $zonderNullen);
-echo "Zonder nullen: " . $ZonderNullenString . "\n";
+foreach ($klantnummers as $klantnummer) {
 
-// print_r($zonderNullen) . "\n";
+    // skipt de 0 / vervangt de 0 met een lege string
+    $zonderNullen = str_replace('0', '', $klantnummer);
 
-// $NulAlsStop = str_replace('', '0', $ZonderNullenString);
-// echo "Nul als stop: " . $NulAlsStop . "\n";
-
-$totaal = 0;
-
-
-
-
-    foreach (str_split($ZonderNullenString) as $cijfer) {
+    $totaal = 0;
+    foreach (str_split($zonderNullen) as $cijfer) {
         // alle losse cijfers optellen en in totaal zetten
         $totaal += (int)$cijfer;
     }
@@ -29,4 +21,5 @@ $totaal = 0;
     } else {
         echo "Het klantnummer is ongeldig.\n";
     }
+}
 ?>
