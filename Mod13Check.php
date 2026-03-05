@@ -1,5 +1,5 @@
 <?php
-$input = readline("Voer een klantnummer in: ");
+$input = readline("Voer klantnummer(s) in: ");
 
 // splits de invoer in meerdere klantnummers
 $klantnummers = explode(" ", $input);
