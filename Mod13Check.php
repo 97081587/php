@@ -1,26 +1,26 @@
 <?php
-$input = readline("Voer klantnummer(s) in: ");
+//prefix
+$prefix = '2401160930';
 
-// splits de invoer in meerdere klantnummers
-$klantnummers = explode(" ", $input);
+//10 klantnummers genereren
+for ($i = 0; $i < 10; $i++) {
+    $randEndNr = rand(1000, 9999);
 
-//loopt door elk klantnummer heen
-foreach ($klantnummers as $klantnummer) {
+    // hele klantnummer combo
+    $klantnummer= $prefix . $randEndNr;
 
-    // skipt de 0 / vervangt de 0 met een lege string
-    $zonderNullen = str_replace('0', '', $klantnummer);
+    echo "Het gegenereerde klantnummer is: " . $klantnummer . "\n";
 
-    $totaal = 0;
-    foreach (str_split($zonderNullen) as $cijfer) {
-        // alle losse cijfers optellen en in totaal zetten
-        $totaal += (int)$cijfer;
-    }
+    //   mod 13 check
+    while ($klantnummer % 13 == 0){       
+        
+    }   
 
-    // mod 13 check
-    if ($totaal % 13 === 0) {
-        echo "Het klantnummer is geldig.\n";
-    } else {
-        echo "Het klantnummer is ongeldig.\n";
-    }
+        // if ($klantnummer % 13 === 0) {
+        //     echo "Het klantnummer " . $klantnummer . " is geldig.\n";
+        // } elseif ($klantnummer % 13 !== 0) {
+        //     echo "Het klantnummer " . $klantnummer . " is ongeldig.\n";
+
+        // } 
 }
-?>
+?>  
